@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="hydra.repo" name="[B][COLOR red]Hydra repository[/COLOR][/B]" version="1.9.1" provider-name="zoreu">
+	<extension point="xbmc.addon.repository" name="Hydra Repository">
+		<info compressed="false">http://raw.github.com/zoreu/hydrakodi/master/addons.xml</info>
+		<checksum>http://raw.github.com/zoreu/hydrakodi/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/zoreu/hydrakodi/master/addons/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Hydra Repository</summary>
+		<description>Hydra for Kodi</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="plugin.program.AresVikings18" name=" [B][COLOR orange]Ares Vikings Wizard[/COLOR][/B]" version="1.13" provider-name="[B][COLOR red]Pio[/COLOR][/B]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
