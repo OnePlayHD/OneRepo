@@ -129,7 +129,7 @@ Bringing pleasure and pleasure for you to watch and enjoy every moment with fami
   </extension>
 </addon>
 
-<addon id="repo.vikings" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Oficial[/B][/COLOR]" version="1.11" provider-name="by @Pio">">
+<addon id="repo.vikings" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Oficial[/B][/COLOR]" version="1.12" provider-name="by @Pio">">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -139,6 +139,7 @@ Bringing pleasure and pleasure for you to watch and enjoy every moment with fami
     <import addon="script.module.requests" />
     <import addon="script.module.httplib2" />
     <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="plugin.video.youtube" version="5.2.1" />
     <import addon="script.module.urlresolver" />
     <import addon="script.module.simplejson" />
     <import addon="script.module.livestreamer"/>
