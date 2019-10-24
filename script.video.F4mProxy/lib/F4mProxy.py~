@@ -447,7 +447,7 @@ class f4mProxyHelper():
             runningthread=thread.start_new_thread(f4m_proxy.start,(stopPlaying,))
             progress.create('[COLOR white] INICIANDO PROXY LOCAL[B] [/COLOR] [/B]')
             stream_delay = 1
-            progress.update( 20, "", '[COLOR white] [B]CARREGANDO O CANAL|FILMES E TV| [/COLOR] [/B]', "" )
+            progress.update( 20, "", '[COLOR white] [B]CARREGANDO O CANAL [/COLOR] [/B]', "" )
             xbmc.sleep(stream_delay*1000)
             progress.update( 100, "", '[COLOR white] [B]CARREGANDO O CANAL |FILMES E TV| [/COLOR] [/B]', "" )
             url_to_play=f4m_proxy.prepare_url(url,proxy,use_proxy_for_chunks,maxbitrate=maxbitrate,simpleDownloader=simpleDownloader,auth=auth, streamtype=streamtype, swf=swf , callbackpath=callbackpath,callbackparam=callbackparam)
