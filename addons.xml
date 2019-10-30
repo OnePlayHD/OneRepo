@@ -17,13 +17,6 @@
 <addon id="plugin.program.advancedsettings" name="Easy Advanced Settings" version="0.9.0" provider-name="kinkin">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="plugin.video.f4mTester"/>
-        <import addon="plugin.video.live.streamspro"/>
-        <import addon="script.video.F4mProxy"/>
-        <import addon="script.game.center"/>
-        <import addon="plugin.video.playlistLoader.a"/>
-        <import addon="plugin.program.SpeedTester.net"/>
-        <import addon="script.module.urlresolver"/>,
     </requires>
     <extension point="xbmc.python.pluginsource"
                	library="default.py">
