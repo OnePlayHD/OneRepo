@@ -142,7 +142,9 @@ Levando o lazer e o prazer para vocÃªs assistir e curtir cada momento com a fa
   </extension>
 </addon>
 
-<addon id="repo.vikings" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Oficial[/B][/COLOR]" version="1.13" provider-name="by @Pio">">
+<addon id="repo.vikings" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Vikings Oficial, SEM BANIMENTO!![/B][/COLOR]"
+version="1.14.1"
+provider-name="Vikings TEAM">">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -152,7 +154,6 @@ Levando o lazer e o prazer para vocÃªs assistir e curtir cada momento com a fa
     <import addon="script.module.requests" />
     <import addon="script.module.httplib2" />
     <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="plugin.video.youtube" version="5.2.1" />
     <import addon="script.module.urlresolver" />
     <import addon="script.module.simplejson" />
     <import addon="script.module.livestreamer"/>
@@ -174,7 +175,7 @@ Levando o lazer e o prazer para vocÃªs assistir e curtir cada momento com a fa
 		<description>Repositorio oficial Vikings Build - Proibido reproducao sem previa autorizacao</description>
 		<news>
 	Estamos voltando, aguardem...!!!
-	Os addons que serÃ¡ instalado nÃ£o hospeda nem possui nenhum conteÃºdo. O autor nÃ£o Ã© responsÃ¡vel pelo uso e pelo conteÃºdo encontrado usando este addon
+	Os addons que serÃ¡ instalado, nÃ£o Ã© hospedado, tampouco o conteÃºdo dos mesmos Ã© de responsabilidade da Vikings Build. O autor nÃ£o Ã© responsÃ¡vel pelo uso incorreto ou pelo conteÃºdo encontrado nestes addons!!
 </news>
 
 		<disclaimer></disclaimer>
