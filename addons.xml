@@ -23,7 +23,7 @@
 
 </addon>
 
-<addon id="plugin.program.AresVikings18" name=" [B][COLOR orange]Ares Vikings Wizard[/COLOR][/B]" version="1.13" provider-name="[B][COLOR red]Pio[/COLOR][/B]">
+<addon id="plugin.program.aresvikings" name=" [B][COLOR orange]Ares Vikings Wizard[/COLOR][/B]" version="2.00" provider-name="[B][COLOR red]Vikings Team[/COLOR][/B]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	</requires>
