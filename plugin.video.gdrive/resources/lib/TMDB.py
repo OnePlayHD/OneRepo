@@ -18,20 +18,18 @@
 
 '''
 
+import os
 import re
-import urllib2
-import sys
+import urllib, urllib2
+import cookielib
 
-KODI = True
-if re.search(re.compile('.py', re.IGNORECASE), sys.argv[0]) is not None:
-    KODI = False
+import xbmc, xbmcaddon, xbmcgui, xbmcplugin
 
-if KODI:
-    import xbmc, xbmcgui
-else:
-    from resources.libgui import xbmc
-
+import authorization
+import crashreport
+from resources.lib import package
 from resources.lib import file
+from resources.lib import folder
 
 
 class TMDB:
@@ -41,6 +39,8 @@ class TMDB:
     def __init__(self, service, addon, user_agent):
         self.addon = addon
         self.service = service
+#        self.crashreport = crashreport
+#        self.crashreport.sendError('test','test')
 
         self.user_agent = user_agent
 
@@ -58,6 +58,8 @@ class TMDB:
         title = re.sub(' ', '%20', title)
         url = 'https://api.themoviedb.org/3/search/movie?api_key='+self.API_KEY+'&language=en-US&query='+title+'&year='+year
 
+        mediaList = []
+
         req = urllib2.Request(url, None, self.service.getHeadersList())
 
         try:
@@ -66,6 +68,7 @@ class TMDB:
             if e.msg != '':
                 xbmcgui.Dialog().ok(self.addon.getLocalizedString(30000), e.msg)
                 xbmc.log(self.addon.getAddonInfo('movieSearch') + ': ' + str(e), xbmc.LOGERROR)
+                self.crashreport.sendError('movieSearch',str(e))
 
         response_data = response.read()
         response.close()
@@ -89,6 +92,7 @@ class TMDB:
 
         url = 'https://api.themoviedb.org/3/movie/'+movieID+'?api_key='+self.API_KEY + '&language=en-US'
 
+        mediaList = []
 
         req = urllib2.Request(url, None, self.service.getHeadersList())
 
@@ -98,6 +102,7 @@ class TMDB:
             if e.msg != '':
                 xbmcgui.Dialog().ok(self.addon.getLocalizedString(30000), e.msg)
                 xbmc.log(self.addon.getAddonInfo('movieDetails') + ': ' + str(e), xbmc.LOGERROR)
+                self.crashreport.sendError('movieDetails',str(e))
 
         response_data = response.read()
         response.close()

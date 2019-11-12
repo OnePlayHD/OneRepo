@@ -27,20 +27,20 @@ class folder:
 
     ##
     ##
-    def __init__(self, id, title, fanart='', thumb='', isRoot=False):
+    def __init__(self, id, title, fanart='', thumb=''):
         self.id = id
         self.title = title
         self.fanart = fanart
         self.thumb = thumb
         self.displaytitle = title
-        self.isRoot = isRoot
 
     def displayTitle(self):
         return urllib.unquote(self.displaytitle)
 
 
-#    def __repr__(self):
-#        return '{}: {} {}'.format(self.__class__.__name__,self.title)
+    def __repr__(self):
+        return '{}: {} {}'.format(self.__class__.__name__,
+                                  self.title)
 
     def __cmp__(self, other):
         if hasattr(other, 'title'):

@@ -19,10 +19,9 @@
 
 import sys
 import cgi
-import re
 
-
-
+# cloudservice - standard XBMC modules
+import xbmcaddon
 
 
 #http://stackoverflow.com/questions/1208916/decoding-html-entities-with-python/1208931#1208931
@@ -36,87 +35,49 @@ def _callback(matches):
 def decode(data):
     return re.sub("&#(\d+)(;|(?=\s))", _callback, data).strip()
 
-def getParameter0(key,default=''):
+def getParameter(key,default=''):
     try:
         value = plugin_queries[key]
-        if value == 'true' or value == 'True':
+        if value == 'true':
             return True
-        elif value == 'false' or value == 'False':
+        elif value == 'false':
             return False
         else:
             return value
     except:
         return default
 
-def getParameterInt0(key,default=0):
-    try:
-        value = plugin_queries[key]
-        if value == '':
-            return default
-        elif value == 'true' or value == 'True':
-            return True
-        elif value == 'false' or value == 'False':
-            return False
-        elif value is None:
-            return default
-        else:
-            return value
-    except:
-        return default
-
-def getSetting0(key,default=''):
+def getSetting(key,default=''):
     try:
         value = addon.getSetting(key)
-        if value == 'true' or value == 'True':
+        if value == 'true':
             return True
-        elif value == 'false' or value == 'False':
+        elif value == 'false':
             return False
-        else:
-            return value
-    except:
-        return default
-
-def getSettingInt0(key,default=0):
-    try:
-        value = addon.getSetting(key)
-        if value == '':
-            return default
-        elif value == 'true' or value == 'True':
-            return True
-        elif value == 'false' or value == 'False':
-            return False
-        elif value is None:
-            return default
         else:
             return value
     except:
         return default
 
 def parse_query(query):
-    queries = {}
-    try:
-        queries = cgi.parse_qs(query)
-    except:
-        return
+    queries = cgi.parse_qs(query)
     q = {}
     for key, value in queries.items():
         q[key] = value[0]
     q['mode'] = q.get('mode', 'main')
     return q
 
-
-
 plugin_queries = None
 try:
     plugin_queries = parse_query(sys.argv[2][1:])
-except:
-    plugin_queries = None
-
+except:pass
 
 # global variables
-#import constants
-#addon = constants.addon
+import addon_parameters
+addon = addon_parameters.addon
 
+#addon = xbmcaddon.Addon(id='plugin.video.gdrive-testing')
+#addon = xbmcaddon.Addon(id='plugin.video.gdrive')
 
 #
 #
@@ -126,17 +87,17 @@ class settings:
 
     ##
     ##
-    def __init__(self, addons):
-        self.addon = addons
- #       addon = addons
+    def __init__(self, addon):
+        self.addon = addon
         #self.integratedPlayer = self.getSetting('integrated_player', False)
-        self.cc = self.getParameter('cc', self.getSetting('cc', True))
-        self.srt = self.getParameter('srt', self.getSetting('srt', True))
+        self.cc = getParameter('cc', self.getSetting('cc', True))
+        self.srt = getParameter('srt', self.getSetting('srt', True))
         #self.srt_folder = getParameter('srt_folder', self.getSetting('srt_folder', False))
-        self.strm = self.getParameter('strm', False)
-        self.username = self.getParameter('username', '')
+        self.strm = getParameter('strm', True) ## force to TRUE, set to false manually
+
+        self.username = getParameter('username', '')
         self.setCacheParameters()
-        self.promptQuality = self.getParameter('promptquality', self.getSetting('prompt_quality', True))
+        self.promptQuality = getParameter('promptquality', self.getSetting('prompt_quality', True))
         self.parseTV = self.getSetting('parse_tv', True)
         self.parseMusic = self.getSetting('parse_music', True)
         self.skipResume = self.getSetting('video_skip', 0.98)
@@ -145,10 +106,9 @@ class settings:
 #        self.cloudSpreadsheet = self.getSetting('library_filename', 'CLOUD_DB')
         self.tv_watch  = self.getSetting('tv_db_watch', False)
         self.movie_watch  = self.getSetting('movie_db_watch', False)
-        self.localDB = self.getSetting('local_db', False)
 
-        self.seek = self.getParameter('seek', 0)
-        self.trace = self.getSetting('trace', False)
+        self.seek = getParameter('seek', 0)
+        self.trace = getSetting('trace', False)
 
         self.photoResolution = int(self.getSettingInt('photo_resolution', 0))
         if self.photoResolution == 0:
@@ -176,25 +136,23 @@ class settings:
 #            self.thumbnailResolution = 200
 
         self.streamer =  self.getSetting('streamer', True)
-        self.streamPort =  int(self.getSettingInt('stream_port', 8011))
+        self.streamPort =  int(self.getSetting('stream_port', 8011))
 
 
-        self.encfsDownloadType = int(self.getSettingInt('encfs_download_type', 1))
+        self.encfsDownloadType = int(self.getSetting('encfs_download_type', 1))
 
 
     def setVideoParameters(self):
-        self.resume = self.getParameter('resume', False)
+        self.resume = getParameter('resume', False)
 
-        if not self.getParameter('override', False):
-            self.playOriginal = self.getParameter('original', self.getSetting('never_stream', False))
-        else:
-            self.playOriginal = False
+        self.playOriginal = getParameter('original', self.getSetting('never_stream', False))
+
 
     def setCacheParameters(self):
-        self.cache = self.getParameter('cache', False)
+        self.cache = getParameter('cache', False)
 #        self.download = self.getSetting('always_cache', getParameter('download', False))
-        self.download = self.getParameter('download', self.getSetting('always_cache', False))
-        self.play = self.getParameter('play', self.getSetting('always_cache', False))
+        self.download = getParameter('download', getSetting('always_cache', False))
+        self.play = getParameter('play', getSetting('always_cache', False))
         self.cachePath = self.getSetting('cache_folder')
         self.cacheSingle = self.getSetting('cache_single')
         self.cachePercent = self.getSetting('cache_percent', 10)
@@ -227,37 +185,22 @@ class settings:
     def getParameter(self, key, default=''):
         try:
             value = plugin_queries[key]
-            if value == 'true' or value == 'True':
+            if value == 'true':
                 return True
-            elif value == 'false' or value == 'False':
+            elif value == 'false':
                 return False
             else:
                 return value
         except:
             return default
 
-
-    def getParameterInt(self, key, default=0):
-        try:
-            value = plugin_queries[key]
-            if value == 'true' or value == 'True':
-                return True
-            elif value == 'false' or value == 'False':
-                return False
-            else:
-                return value
-        except:
-            return default
-
-    def getSetting(self, key, default='', forceSync=False):
+    def getSetting(self, key, default=''):
         try:
             value = self.addon.getSetting(key)
-            if value == 'true' or value == 'True':
+            if value == 'true':
                 return True
-            elif value == 'false' or value == 'False':
+            elif value == 'false':
                 return False
-            elif value is None:
-                return default
             else:
                 return value
         except:

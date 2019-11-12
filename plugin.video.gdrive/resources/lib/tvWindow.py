@@ -16,18 +16,12 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
+import os
 import re
-import sys
+import urllib, urllib2
 
-KODI = True
-if re.search(re.compile('.py', re.IGNORECASE), sys.argv[0]) is not None:
-    KODI = False
+import xbmc, xbmcaddon, xbmcgui, xbmcplugin
 
-if KODI:
-
-    import xbmcgui
-else:
-    from resources.libgui import xbmcgui
 
 class tvWindow(xbmcgui.WindowXMLDialog):
 
