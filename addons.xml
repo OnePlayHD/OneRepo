@@ -98,15 +98,24 @@
 
 <addon id="plugin.video.OnePlay" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="2.9.3" provider-name="Equipe OnePlay">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.1.1"/>
+    <import addon="xbmc.python" version="2.24.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="1.9.5"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
     <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.requests" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" version="0.9.4"/>
     <import addon="script.module.httplib2" />
-    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="script.module.urlresolver" optional="true"/>
     <import addon="script.module.simplejson" />
+	<import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="script.module.livestreamer"/>
+    <import addon="script.module.pyamf"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.addon.signals" version="0.0.1"/>
+    <import addon="script.module.unidecode" version = "0.4.16" />
   </requires>
 
   <extension point="xbmc.python.pluginsource" library="basedem.py">
