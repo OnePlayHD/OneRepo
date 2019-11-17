@@ -1,0 +1,6 @@
+V2.9.2
+Adicionado Configurações área VIP Assinantes e alguns ajustes.
+V2.9.3
+Adicionado pesquisa e correção de erros.
+V2.9.4
+Adicionado Contador, adicionados comandos.
