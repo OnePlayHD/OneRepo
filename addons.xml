@@ -148,7 +148,7 @@ Levando o lazer e o prazer para vocÃªs assistir e curtir cada momento com a fa
 </addon>
 
 <addon id="repo.vikings" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Vikings Oficial, SEM BANIMENTO!![/B][/COLOR]"
-version="1.15.1"
+version="1.16"
 provider-name="Vikings TEAM">">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>

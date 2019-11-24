@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repo.vikings" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Vikings Oficial, SEM BANIMENTO!![/B][/COLOR]" 
-version="1.15.1" 
+version="1.16" 
 provider-name="Vikings TEAM">">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>
