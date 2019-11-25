@@ -10,19 +10,14 @@
     </extension>
     <extension point="xbmc.addon.metadata">	    
         <platform>all</platform>
-	    
         <summary lang="en">Movies, TV, Music, User-Clips, and Livestreams</summary>
 		<summary lang="fr">Films, Séries TV, Musique, Clips, et Live</summary>    
-        <summary lang="he">סרטים, טלוויזיה, מוסיקה, סירטונים של המשתמש, תלת מימד והזרמה חיה</summary>   
-        
+
 		<description lang="en">Dailymotion attracts 300 million users from around the world, who watch 3.5 billion videos on its player each month.</description>
 		<description lang="fr">Dailymotion attire 300 millions d’utilisateurs qui regardent 3,5 milliards de vidéos sur son player chaque mois, à travers le monde.</description>
-		<description lang="he">Dailymotion מושך 300 מיליון משתמשים מרחבי העולם שצופים ב -3.5 מיליארד סרטונים מדי חודש.</description>
-	
+
 		<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
 		<disclaimer lang="fr">Certaines parties de cet addon peuvent ne pas être légales dans votre pays de résidence - s’il vous plaît vérifier avec vos lois locales avant d’installer.</disclaimer>
-		<disclaimer lang="he">ייתכן שחלק מהתוספות האלו אינן חוקיות בארץ המגורים שלך - אנא בדוק את החוקים המקומיים שלך לפני ההתקנה.</disclaimer>
-	    
         <news>
 [B]Version 2.3.9 - 23 May 2019[/B] 
  - Make code Python 3 compatible
