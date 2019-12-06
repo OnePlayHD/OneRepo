@@ -1,5 +1,0 @@
-addon_name="Gdrive"
-addon_id="plugin.video.gdrive"
-dir="special://home/addons/plugin.video.gdrive"
-url_zip="https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/plugin.video.gdrive/plugin.video.gdrive-8.866.zip"
-description="Addon para reprodução de videos do google drive"
