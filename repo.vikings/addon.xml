@@ -1,40 +1,48 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repo.vikings" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Vikings Oficial, SEM BANIMENTO!![/B][/COLOR]" 
-version="1.16" 
+<addon id="repo.vikings" 
+name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Vikings Oficial, SEM BANIMENTO!![/B][/COLOR]" 
+version="1.22" 
 provider-name="Vikings TEAM">">
+	
 	<requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup4" />
+	<import addon="xbmc.python" version="2.25.0"/>
+	<import addon="script.module.t0mm0.common" version="2.1.1"/>
+	<import addon="script.common.plugin.cache" />
+	<import addon="script.module.metahandler" />
+	<import addon="script.module.addon.signals" />
+	<import addon="script.module.beautifulsoup" />
+	<import addon="script.module.beautifulsoup4" />
+	<import addon="script.module.simple.downloader" />
     <import addon="script.module.requests" />
     <import addon="script.module.httplib2" />
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
     <import addon="script.module.urlresolver" />
     <import addon="script.module.simplejson" />    
-    <import addon="script.module.livestreamer"/>
-    <import addon="script.module.pyamf"/>
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-	<import addon="script.module.addon.common" />
-	<import addon="script.module.addon.signals" version="0.0.1"/>
-	
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.pyamf" />
+    <import addon="script.module.unidecode" />
   </requires>
-  <extension point="xbmc.addon.repository" name="Vikings Repository">
-		<info compressed="false">http://raw.github.com/vikingsbuild/repo.vikings/master/addons.xml</info>
-		<checksum>http://raw.github.com/vikingsbuild/repo.vikings/master/addons.xml.md5</checksum>
-		<datadir zip="true">http://raw.github.com/vikingsbuild/repo.vikings/master/addons/</datadir>
+  
+      <extension point="xbmc.addon.repository" name="Vikings Repositorio">
+		<info compressed="true">https://raw.github.com/vikingsbuild/repo.vikings/master/addons.xml</info>
+		<checksum>https://raw.github.com/vikingsbuild/repo.vikings/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/vikingsbuild/repo.vikings/master/addons/</datadir>
 	</extension>
+	
 	<extension point="xbmc.addon.metadata">
-		<summary>Repositorio Vikings</summary>
-		<description>Repositorio oficial Vikings Build - Proibido reproducao sem previa autorizacao</description>
-		<news>
-	Estamos voltando, aguardem...!!!
-	Os addons que será instalado, não é hospedado, tampouco o conteúdo dos mesmos é de responsabilidade da Vikings Build. O autor não é responsável pelo uso incorreto ou pelo conteúdo encontrado nestes addons!!
-</news>
+	<news>
+	[COLOR orange]LOG DE CORREÇÔES[/COLOR]
+	[COLOR orange]*[/COLOR] V 1.15.1 - Excluido a instalação do plugin Youtube que provocava erros em algumas box...
+	[COLOR gold]*[/COLOR]   V 1.17.1 - Corrigido dependências que provocava erros quando instalado o repositório em Kodi Padrão.
+	</news>
 		
-		<disclaimer></disclaimer>
+	<summary>Repositorio Vikings levando os melhores addons a sua familia e aos quatro cantos do Mundo!!!</summary>
+		
+	<description>	[B][COLOR red]Repositório oficial Vikings Build - Proibido reprodução total ou parcial sem prévia autorização[/COLOR][/B]
+					[B][COLOR white]Addons deste repositório é de uso gratuito!![/COLOR][/B]
+					[B][COLOR firebrick]Proibido a venda dos add-ons contidos neste repositório[/COLOR][/B]
+	</description>
+		
+<disclaimer>[B][COLOR orange]Repositório Vikings é apenas um AGREGADOR de ADDONS e, assim como o Google.com, apenas agrega e organiza ADDONS DE TERCEIROS. Não somos responsáveis pelos arquivos aqui encontrados.[/COLOR][/B]</disclaimer>
 		<platform>all</platform>
 	</extension>
 </addon>
