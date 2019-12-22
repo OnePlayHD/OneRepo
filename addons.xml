@@ -198,50 +198,58 @@ Levando o lazer e o prazer para vocÃªs assistir e curtir cada momento com a fa
   </extension>
 </addon>
 
-<addon id="repo.vikings"
-name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Vikings Oficial, SEM BANIMENTO!![/B][/COLOR]"
-version="1.22"
-provider-name="Vikings TEAM">">
+<addon 	id="repo.vikings" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Vikings Oficial, SEM BANIMENTO!![/B][/COLOR]"
+		version="1.50"
+		provider-name="[B][COLOR gold]Vikings TEAM[/B][/COLOR]">
 
-	<requires>
-	<import addon="xbmc.python" version="2.25.0"/>
-	<import addon="script.module.t0mm0.common" version="2.1.1"/>
-	<import addon="script.common.plugin.cache" />
-	<import addon="script.module.metahandler" />
-	<import addon="script.module.addon.signals" />
-	<import addon="script.module.beautifulsoup" />
-	<import addon="script.module.beautifulsoup4" />
-	<import addon="script.module.simple.downloader" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.urlresolver" />
-    <import addon="script.module.simplejson" />
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.pyamf" />
-    <import addon="script.module.unidecode" />
+<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.beautifulsoup" version="3.2.1"/>
+		<import addon="script.module.simple.downloader" version="0.9.4"/>
+		<import addon="script.module.t0mm0.common" version="2.0.0"/>
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.httplib2" />
+		<import addon="script.module.simple.downloader" version="0.9.4"/>
+		<import addon="script.module.urlresolver" />
+		<import addon="script.module.simplejson" />
+		<import addon="script.module.livestreamer"/>
+		<import addon="script.module.pyamf"/>
+		<import addon="script.common.plugin.cache" version="2.5.2"/>
+		<import addon="script.module.metahandler" version="2.5.1"/>
+		<import addon="script.module.addon.common" />
+		<import addon="script.module.addon.signals" version="0.0.1"/>
   </requires>
 
-      <extension point="xbmc.addon.repository" name="Vikings Repositorio">
-		<info compressed="true">https://raw.github.com/vikingsbuild/repo.vikings/master/addons.xml</info>
-		<checksum>https://raw.github.com/vikingsbuild/repo.vikings/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.github.com/vikingsbuild/repo.vikings/master/addons/</datadir>
-	</extension>
+	<extension point="xbmc.addon.repository" name="Vikings Repositorio">
+
+		<dir minversion="16.0.0">
+			<info compressed="true">https://github.com/vikingsbuild/repo.vikings/raw/master/jarvis/addons.xml</info>
+			<checksum>https://github.com/vikingsbuild/repo.vikings/raw/master/jarvis/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/vikingsbuild/repo.vikings/raw/master/jarvis</datadir>
+		</dir>
+
+		<dir minversion="17.0.0">
+			<info compressed="true">https://github.com/vikingsbuild/repo.vikings/raw/master/krypton/addons.xml</info>
+			<checksum>https://github.com/vikingsbuild/repo.vikings/raw/master/krypton/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/vikingsbuild/repo.vikings/raw/master/krypton</datadir>
+		</dir>
+
+		<dir minversion="18.0.0">
+			<info compressed="true">https://github.com/vikingsbuild/repo.vikings/raw/master/leia/addons.xml</info>
+			<checksum>https://github.com/vikingsbuild/repo.vikings/raw/master/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/vikingsbuild/repo.vikings/raw/master/leia</datadir>
+		</dir>
+</extension>
 
 	<extension point="xbmc.addon.metadata">
-	<news>
-	[COLOR orange]LOG DE CORREÃ‡Ã”ES[/COLOR]
-	[COLOR orange]*[/COLOR] V 1.15.1 - Excluido a instalaÃ§Ã£o do plugin Youtube que provocava erros em algumas box...
-	[COLOR gold]*[/COLOR]   V 1.17.1 - Corrigido dependÃªncias que provocava erros quando instalado o repositÃ³rio em Kodi PadrÃ£o.
+		<summary>Repositorio Vikings</summary>
+		<description>Repositorio oficial Vikings Build - Proibido reproducao sem previa autorizacao</description>
+		<news>
+		Os addons aqui incluido, nao Ã© criado, produzido ou hospedado pela Vikings Build, tampouco o conteudo dos mesmos e
+		de responsabilidade da Vikings Build. O autornao e responsavel pelo uso incorreto ou pelo conteudo encontrado nestes addons!!
 	</news>
-
-	<summary>Repositorio Vikings levando os melhores addons a sua familia e aos quatro cantos do Mundo!!!</summary>
-
-	<description>	[B][COLOR red]RepositÃ³rio oficial Vikings Build - Proibido reproduÃ§Ã£o total ou parcial sem prÃ©via autorizaÃ§Ã£o[/COLOR][/B]
-					[B][COLOR white]Addons deste repositÃ³rio Ã© de uso gratuito!![/COLOR][/B]
-					[B][COLOR firebrick]Proibido a venda dos add-ons contidos neste repositÃ³rio[/COLOR][/B]
-	</description>
-
-<disclaimer>[B][COLOR orange]RepositÃ³rio Vikings Ã© apenas um AGREGADOR de ADDONS e, assim como o Google.com, apenas agrega e organiza ADDONS DE TERCEIROS. NÃ£o somos responsÃ¡veis pelos arquivos aqui encontrados.[/COLOR][/B]</disclaimer>
+		<disclaimer></disclaimer>
 		<platform>all</platform>
 	</extension>
 </addon>
