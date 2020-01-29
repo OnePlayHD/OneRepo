@@ -1,0 +1,23 @@
+addon_name="F4mProxy"
+addon_id="script.video.F4mProxy"
+dir="special://home/addons/script.video.F4mProxy"
+url_zip="https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/script.video.F4mProxy/script.video.F4mProxy-3.0.1.zip"
+description="Addon para reprodução de canais com estabilidade"
+
+addon_name="F4mTester"
+addon_id="plugin.video.f4mTester"
+dir="special://home/addons/plugin.video.f4mTester"
+url_zip="https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/plugin.video.f4mTester/plugin.video.f4mTester-3.0.1.zip"
+description="Addon para reprodução de canais com estabilidade"
+
+addon_name="Gdrive"
+addon_id="plugin.video.gdrive"
+dir="special://home/addons/plugin.video.gdrive"
+url_zip="https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/plugin.video.gdrive/plugin.video.gdrive-8.866.zip"
+description="Addon para reprodução de videos do google drive"
+
+addon_name="Elementum"
+addon_id="plugin.video.elementum"
+dir="special://home/addons/plugin.video.elementum"
+url_zip="https://github.com/elgatito/plugin.video.elementum/releases/download/v0.1.45/plugin.video.elementum-0.1.45.zip"
+description="Addon para reprodução de videos por torrent"
