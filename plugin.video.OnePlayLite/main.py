@@ -2205,7 +2205,7 @@ def Update():
 			file.close()
 		xbmc.executebuiltin("Notification({0}, {1}, 9000, {2})".format(__addonname__, "Atualizando o add-on. Aguarde...", __icon__))
 	except:
-		xbmcgui.Dialog().ok('[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]', "A Sua versão está desatualizada, mas não se preocupe que a atualização é automática, Caso ocorrer algum erro\n[COLOR aquamarine]Atualize o add-on no repositorio ou baixe o zip no site oficial[/COLOR].").xbmc.executebuiltin
+		xbmcgui.Dialog().ok('[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]', "A Sua versão está desatualizada, mas não se preocupe que a atualização é automática, Caso ocorrer algum erro\n[COLOR aquamarine]Atualize o add-on no repositorio ou baixe o zip no site oficial[/COLOR].")
 
 
 
