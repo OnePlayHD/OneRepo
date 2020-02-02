@@ -23,7 +23,7 @@ import traceback
 import time
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
 
-Versao = "16.01.2020"
+Versao = "31.01.2020"
 
 ##CONFIGURAÇÕES
 ####  TITULO DO MENU  #################################################################
