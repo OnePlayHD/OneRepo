@@ -49,6 +49,7 @@
 	<setting label="[COLOR lightblue]Configurações de Complemento:[/COLOR]" type="lsep"/>
 	<setting label="Verificar Complementos" id="check_addon" type="bool" default="true" />
 	<setting label="Baixar e Instalar Elementum" id="elementum" type="bool" default="false" />
+	<setting label="Baixar e Instalar Youtube" id="youtube" type="bool" default="false" />
 </category>
 <category label="Outros">
 	<setting label="[COLOR lightblue]Configurações Gerais:[/COLOR]" type="lsep"/>
@@ -56,8 +57,8 @@
 	<setting label="Exibir Mensagem de Suporte" id="popupsupport" type="bool" default="true" />
 	<setting label="Exibir Mensagem de Status" id="mensagem2" type="bool" default="true" />
 	<setting label="Exibir Favoritos" id="favoritos" type="bool" default="false" />
-    <setting label="Entre aqui para limpar os favoritos" type="action" action="RunScript(plugin.video.OnePlay, limparFavoritos)"/>
-	<setting label="Executar youtube fora do Oneplay" id="youtubeexterno" type="bool" default="false" />
+    <setting label="Entre aqui para limpar os favoritos" type="action" action="RunScript(plugin.video.OnePlay, limparFavoritos)"/>	
+	<setting label="Executar youtube" id="ytbmode" type="enum" values="Interno 1|Interno 2|Externo" default="1" />	
     <setting label="Exibir Menu Pesquisar" id="pesquisa" type="bool" default="false" />
     <setting label="Use Miniaturas como Fanart" id="use_thumb" type="bool" default="false" />
 </category>
