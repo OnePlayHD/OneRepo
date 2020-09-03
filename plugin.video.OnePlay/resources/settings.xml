@@ -10,6 +10,8 @@
     <setting label="[COLOR white]OnePlay Pro: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplaypro)"/>
     <setting label="[COLOR white]OnePlay Fast: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplayfast)"/>
     <setting label="[COLOR white]OnePlay Lite: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplaylite)"/>
+	<setting label="[COLOR lightblue]Download app android[/COLOR] [COLOR dodgerblue](P2P)[/COLOR]" type="lsep"/>
+    <setting label="[COLOR white]Aplicativo P2P: Outro Sistema[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, playp2p)"/>
 	<setting label="[COLOR lightblue]Informações da Conta:[/COLOR]" type="lsep"/>
 	<setting label="[COLOR yellow][B]Status[/B][/COLOR]" id="status_vip" type="text" enable="false" default=""/>
 	<setting label="[COLOR yellow][B]Criado em[/B][/COLOR]" id="created_at" type="text" enable="false" default=""/>
