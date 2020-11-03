@@ -167,6 +167,40 @@ Levando o lazer e o prazer para vocÃªs assistir e curtir cada momento com a fa
     </extension>
 </addon>
 
+<addon id="plugin.video.PlayCine.Matrix" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]" version="1.0.5+matrix" provider-name="Equipe OnePlay">
+<requires>
+	<import addon="xbmc.python" version="3.0.0"/>
+	<import addon="script.module.simplejson"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.repository" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]">
+	<info compressed="false">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml</info>
+	<checksum>https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml.md5</checksum>
+	<datadir zip="true">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/</datadir>
+</extension>
+<extension point="xbmc.addon.metadata">
+    <summary>Play Cine para sua Familia.</summary>
+    <description>Play Cine oferece as melhores sÃ©ries e filmes para vocÃª no seu kodi.</description>
+    <disclaimer>PlayCine nÃ£o hospeda os conteudos, todos os filmes e series sÃ£o links agregados ao addon.</disclaimer>
+	<website>http://www.oneplayhd.com/</website>
+    <platform>all</platform>
+	<source>https://github.com/OnePlayHD/OneRepo/tree/master/plugin.video.PlayCine.Matrix</source>
+	<assets>
+		<icon>resources/media/icon.png</icon>
+		<fanart>resources/media/fanart.jpg</fanart>
+		<screenshot>resources/media/screenshot01.jpg</screenshot>
+		<screenshot>resources/media/screenshot02.jpg</screenshot>
+		<screenshot>resources/media/screenshot03.jpg</screenshot>
+    </assets>
+	<news>
+v1.0.5.matrix
+- InauguraÃ§Ã£o do PlayCine em Python 3
+	</news>
+</extension>
+</addon>
+
 <addon id="repository.ddurdle" name="ddurdle's XBMC Addons" version="1.0.2" provider-name="ddurdle">
 	<extension point="xbmc.addon.repository" name="ddurdle's XBMC Addon Repository">
 		<info compressed="false">https://raw.github.com/ddurdle/repository.ddurdle/master/addons.xml</info>
