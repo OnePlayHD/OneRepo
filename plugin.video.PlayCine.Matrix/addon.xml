@@ -20,8 +20,8 @@
     <platform>all</platform>
 	<source>https://github.com/OnePlayHD/OneRepo/tree/master/plugin.video.PlayCine.Matrix</source>
 	<assets>
-		<icon>resources/media/icon.png</icon>
-		<fanart>resources/media/fanart.jpg</fanart>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
 		<screenshot>resources/media/screenshot01.jpg</screenshot>
 		<screenshot>resources/media/screenshot02.jpg</screenshot>
 		<screenshot>resources/media/screenshot03.jpg</screenshot>
