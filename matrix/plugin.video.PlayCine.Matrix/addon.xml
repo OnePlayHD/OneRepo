@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.PlayCine.Matrix" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]" version="1.0.5+matrix" provider-name="Equipe OnePlay"> 
+<requires>
+	<import addon="xbmc.python" version="3.0.0"/>
+	<import addon="script.module.simplejson"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.repository" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]">
+	<info compressed="false">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml</info>
+	<checksum>https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml.md5</checksum>
+	<datadir zip="true">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/</datadir>
+</extension>
+<extension point="xbmc.addon.metadata">
+    <summary>Play Cine para sua Familia.</summary>
+    <description>Play Cine oferece as melhores séries e filmes para você no seu kodi.</description>
+    <disclaimer>PlayCine não hospeda os conteudos, todos os filmes e series são links agregados ao addon.</disclaimer>
+	<website>http://www.oneplayhd.com/</website>
+    <platform>all</platform>
+	<source>https://github.com/OnePlayHD/OneRepo/tree/master/plugin.video.PlayCine.Matrix</source>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<screenshot>resources/media/screenshot01.jpg</screenshot>
+		<screenshot>resources/media/screenshot02.jpg</screenshot>
+		<screenshot>resources/media/screenshot03.jpg</screenshot>
+    </assets>
+	<news>
+v1.0.5.matrix
+- Inauguração do PlayCine em Python 3
+	</news>
+</extension>
+</addon>

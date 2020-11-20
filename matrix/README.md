@@ -1,0 +1,1 @@
+Repositorio Oficial OnePlayHD, todos os direitos reservados!
