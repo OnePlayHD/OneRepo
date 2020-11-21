@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.OnePlay" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.0.9" provider-name="Equipe OnePlay"> 
+<addon id="plugin.video.OnePlay" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.1.0" provider-name="Equipe OnePlay"> 
 <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common"/>
@@ -19,9 +19,10 @@
   </extension>
   
   <extension point="xbmc.addon.repository" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]">
-	<info compressed="false">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml</info>
-	<checksum>https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml.md5</checksum>
-	<datadir zip="true">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/</datadir>
+	<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
+	<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
+	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia</datadir>
+	<hashes>false</hashes>
   </extension>
   
   <extension point="xbmc.addon.metadata">
