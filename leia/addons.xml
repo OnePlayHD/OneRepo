@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]OnePlay[/COLOR][/B]" version="1.04" provider-name="Team [COLOR aquamarine]OnePlay[/COLOR]">
+<addon id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]OnePlay[/COLOR][/B]" version="1.05" provider-name="Team [COLOR aquamarine]OnePlay[/COLOR]">
 	<requires>
 	<import addon="xbmc.addon" version="12.0.0"/>
   </requires>
   <extension point="xbmc.addon.repository" name="Vikings Repository">
-		<info compressed="false">http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml</info>
-		<checksum>http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml.md5</checksum>
-		<datadir zip="true">http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/</datadir>
-		<hashes>false</hashes>
+  	<dir minversion="17.0.0" maxversion="18.9.0">
+			<info compressed="false">http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml</info>
+			<checksum>http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml.md5</checksum>
+			<datadir zip="true">http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/</datadir>
+			<hashes>false</hashes>
+    </dir>
+  	<dir minversion="18.9.1">
+			<info compressed="false">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/matrix/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/matrix/</datadir>
+			<hashes>false</hashes>
+    </dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Repositorio Oficial OnePlay</summary>
@@ -41,7 +49,7 @@
 
 </addon>
 
-<addon id="plugin.video.animesplay" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]" version="1.0.0" provider-name="Equipe OnePlay">
+<addon id="plugin.video.animesplay" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]" version="1.0.1" provider-name="Equipe OnePlay">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.simplejson"/>
@@ -50,9 +58,9 @@
         <provides>video</provides>
     </extension>
   <extension point="xbmc.addon.repository" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]">
-	<info compressed="false">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml</info>
-	<checksum>https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml.md5</checksum>
-	<datadir zip="true">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/</datadir>
+	<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
+	<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
+	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia/ZipFiles/</datadir>
   </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Os Melhores animes aqui!.</summary>
