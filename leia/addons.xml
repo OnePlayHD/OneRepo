@@ -6,9 +6,9 @@
   </requires>
   <extension point="xbmc.addon.repository" name="Vikings Repository">
   	<dir minversion="17.0.0" maxversion="18.9.0">
-			<info compressed="false">http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml</info>
-			<checksum>http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/addons.xml.md5</checksum>
-			<datadir zip="true">http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/ZipFiles/</datadir>
+			<info compressed="false">http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/leia/addons.xml</info>
+			<checksum>http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/leia/addons.xml.md5</checksum>
+			<datadir zip="true">http://raw.githubusercontent.com/OnePlayHD/OneRepo/master/leia/</datadir>
 			<hashes>false</hashes>
     </dir>
   	<dir minversion="18.9.1">
