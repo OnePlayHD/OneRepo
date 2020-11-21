@@ -18,7 +18,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.PlayCine.Matrix" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]" version="1.0.5+matrix" provider-name="Equipe OnePlay">
+<addon id="plugin.video.PlayCine.Matrix" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]" version="1.0.6+matrix.1" provider-name="Equipe OnePlay">
 <requires>
 	<import addon="xbmc.python" version="3.0.0"/>
 	<import addon="script.module.simplejson"/>
@@ -27,17 +27,18 @@
 	<provides>video</provides>
 </extension>
 <extension point="xbmc.addon.repository" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]">
-	<info compressed="false">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/matrix/addons.xml</info>
-	<checksum>https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/matrix/addons.xml.md5</checksum>
-	<datadir zip="true">https://raw.githubusercontent.com/OnePlayHD/OneRepo/master/matrix/</datadir>
+	<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml</info>
+	<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml.md5</checksum>
+	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/matrix</datadir>
+	<hashes>false</hashes>
 </extension>
 <extension point="xbmc.addon.metadata">
-    <summary>Play Cine para sua Familia.</summary>
-    <description>Play Cine oferece as melhores sÃ©ries e filmes para vocÃª no seu kodi.</description>
-    <disclaimer>PlayCine nÃ£o hospeda os conteudos, todos os filmes e series sÃ£o links agregados ao addon.</disclaimer>
+    <summary lang="pt_br">Play Cine para sua Familia.</summary>
+    <description lang="pt_br">Play Cine oferece as melhores sÃ©ries e filmes e conta com Tv Ao vivo para vocÃª no seu kodi.</description>
+    <disclaimer lang="pt_br">PlayCine nÃ£o hospeda os conteudos, todos os filmes e series sÃ£o links agregados ao addon.</disclaimer>
 	<website>http://www.oneplayhd.com/</website>
     <platform>all</platform>
-	<source>https://github.com/OnePlayHD/OneRepo/tree/master/plugin.video.PlayCine.Matrix</source>
+	<source>https://github.com/OnePlayHD/OneRepo/tree/master/matrix/plugin.video.PlayCine.Matrix</source>
 	<assets>
 		<icon>icon.png</icon>
 		<fanart>fanart.jpg</fanart>
@@ -48,6 +49,8 @@
 	<news>
 v1.0.5.matrix
 - InauguraÃ§Ã£o do PlayCine em Python 3
+v1.0.6.matrix.1
+- Adicionado Tv Ao vivo
 	</news>
 </extension>
 </addon>
