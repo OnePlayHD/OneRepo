@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]OnePlay[/COLOR][/B]" version="1.05" provider-name="Team [COLOR aquamarine]OnePlay[/COLOR]">
+<addon id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]OnePlay[/COLOR][/B]" version="1.04" provider-name="Team [COLOR aquamarine]OnePlay[/COLOR]">
 	<requires>
 	<import addon="xbmc.addon" version="12.0.0"/>
   </requires>

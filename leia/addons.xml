@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]OnePlay[/COLOR][/B]" version="1.05" provider-name="Team [COLOR aquamarine]OnePlay[/COLOR]">
+<addon id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]OnePlay[/COLOR][/B]" version="1.04" provider-name="Team [COLOR aquamarine]OnePlay[/COLOR]">
 	<requires>
 	<import addon="xbmc.addon" version="12.0.0"/>
   </requires>
@@ -60,7 +60,7 @@
   <extension point="xbmc.addon.repository" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]">
 	<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
 	<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
-	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia/ZipFiles/</datadir>
+	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia/</datadir>
   </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Os Melhores animes aqui!.</summary>
