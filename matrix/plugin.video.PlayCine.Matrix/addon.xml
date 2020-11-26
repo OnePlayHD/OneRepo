@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.PlayCine.Matrix" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]" version="1.0.6+matrix.1" provider-name="Equipe OnePlay"> 
+<addon id="plugin.video.PlayCine.Matrix" name="[B][COLOR red]Play[/COLOR] [COLOR white]Cine[/COLOR][/B]" version="1.0.7+matrix.1" provider-name="Equipe OnePlay"> 
 <requires>
 	<import addon="xbmc.python" version="3.0.0"/>
 	<import addon="script.module.simplejson"/>
@@ -32,6 +32,8 @@ v1.0.5.matrix
 - Inauguração do PlayCine em Python 3
 v1.0.6.matrix.1
 - Adicionado Tv Ao vivo
+v1.0.7.matrix
+- Correção da codificação
 	</news>
 </extension>
 </addon>
