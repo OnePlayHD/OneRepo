@@ -13,7 +13,7 @@ description="Addon para reprodução de canais com estabilidade"
 addon_name="Elementum"
 addon_id="plugin.video.elementum"
 dir="special://home/addons/plugin.video.elementum"
-url_zip="https://github.com/elgatito/plugin.video.elementum/releases/download/v0.1.61/plugin.video.elementum-0.1.61.zip"
+url_zip="https://github.com/elgatito/plugin.video.elementum/releases/download/v0.1.62/plugin.video.elementum-0.1.62.zip"
 description="Addon para reprodução de videos por torrent"
 
 addon_name="Modulo Six"
