@@ -60,7 +60,8 @@
   <extension point="xbmc.addon.repository" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]">
 	<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
 	<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
-	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia/</datadir>
+	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia</datadir>
+	<hashes>false</hashes>
   </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Os Melhores animes aqui!.</summary>
@@ -83,20 +84,6 @@
     <extension point="xbmc.addon.metadata">
         <summary>f4mTester</summary>
         <description></description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon id="plugin.video.gdrive" version="8.866" name="gdrive" provider-name="ddurdle">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video audio image programs</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Listen to music, watch videos and view photos from your Google Drive account</summary>
-        <description>Plays music and video from your Google Drive account.  Not affiliated with Google.</description>
         <platform>all</platform>
     </extension>
 </addon>
