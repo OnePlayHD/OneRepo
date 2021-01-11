@@ -1,0 +1,17 @@
+addon_name="Elementum"
+addon_id="plugin.video.elementum"
+dir="special://home/addons/plugin.video.elementum"
+url_zip="https://github.com/elgatito/plugin.video.elementum/releases/download/v0.1.65/plugin.video.elementum-0.1.65.zip"
+description="Addon para reprodução de videos por torrent"
+
+addon_name="Modulo Six"
+addon_id="script.module.six"
+dir="special://home/addons/script.module.six"
+url_zip="https://mirrors.kodi.tv/addons/matrix/script.module.six/script.module.six-1.14.0+matrix.2.zip"
+description="Modulo de suporte"
+
+addon_name="Youtube"
+addon_id="plugin.video.youtube"
+dir="special://home/addons/plugin.video.youtube"
+url_zip="https://mirrors.kodi.tv/addons/matrix/plugin.video.youtube/plugin.video.youtube-6.8.9+matrix.1.zip"
+description="Addon para reprodução de videos do youtube"
