@@ -37,7 +37,8 @@
   <extension point="xbmc.addon.repository" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]">
 	<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
 	<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
-	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia/</datadir>
+	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia</datadir>
+	<hashes>false</hashes>
   </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Os Melhores animes aqui!.</summary>
