@@ -7,11 +7,11 @@
 	<setting label="Executar com" id="f4mvip" type="enum" values="[COLOR aquamarine]F4mTester[/COLOR] [COLOR lime](Maior delay)[/COLOR]|[COLOR aquamarine]Padrão[/COLOR] [COLOR yellow](Menor delay)[/COLOR]" default="0" />
 	<setting label="Exibir Menu VIP" id="exibirvip" type="bool" default="true" />
 	<setting label="[COLOR lightblue]Download app android[/COLOR]" type="lsep"/>
+    <setting label="[COLOR white]Google Drive: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, docsdrive)"/>
     <setting label="[COLOR white]OnePlay Pro: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplaypro)"/>
-    <setting label="[COLOR white]XCIPTV Player: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, xciptv)"/>
     <setting label="[COLOR white]OnePlay Fast: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplayfast)"/>
     <setting label="[COLOR white]OnePlay Lite: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplaylite)"/>
-    <setting label="[COLOR white]IPTV Stream: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, iptvstream)"/>
+    <setting label="[COLOR white]OnePlay Lite2: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplaylite2)"/>
 	<setting label="[COLOR lightblue]Download app android[/COLOR]" type="lsep"/>
     <setting label="[COLOR white]Aplicativo IPTV P2P: Outro Sistema[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, playp2p)"/>
 	<setting label="[COLOR lightblue]Informações da Conta:[/COLOR]" type="lsep"/>
