@@ -6,11 +6,11 @@
 	<setting label="Saida de Transmissão VIP" id="saida" type="enum" values="TS|M3U8" default="0" />
 	<setting label="Exibir Menu VIP" id="exibirvip" type="bool" default="true" />
 	<setting label="[COLOR lightblue]Download app android[/COLOR]" type="lsep"/>
-    <setting label="[COLOR white]OnePlay Pro: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay.Matrix, oneplaypro)"/>
-    <setting label="[COLOR white]XCIPTV Player: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay.Matrix, xciptv)"/>
-    <setting label="[COLOR white]OnePlay Fast: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay.Matrix, oneplayfast)"/>
-    <setting label="[COLOR white]OnePlay Lite: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay.Matrix, oneplaylite)"/>
-    <setting label="[COLOR white]IPTV Stream: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay.Matrix, iptvstream)"/>
+    <setting label="[COLOR white]Google Drive: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, docsdrive)"/>
+    <setting label="[COLOR white]OnePlay Pro: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplaypro)"/>
+    <setting label="[COLOR white]OnePlay Fast: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplayfast)"/>
+    <setting label="[COLOR white]OnePlay Lite: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplaylite)"/>
+    <setting label="[COLOR white]OnePlay Lite2: [COLOR gold]Opcional[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay, oneplaylite2)"/>
 	<setting label="[COLOR lightblue]Download app android[/COLOR]" type="lsep"/>
     <setting label="[COLOR white]Aplicativo IPTV P2P: Outro Sistema[/COLOR]" type="action" action="RunScript(plugin.video.OnePlay.Matrix, playp2p)"/>
 	<setting label="[COLOR lightblue]Informações da Conta:[/COLOR]" type="lsep"/>
