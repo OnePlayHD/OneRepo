@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.animesplay" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]" version="1.0.2" provider-name="Equipe OnePlay"> 
+<addon id="plugin.video.animesplay" version="1.0.2" name="[B]Animes [COLOR yellow]Play[/COLOR][/B]" provider-name="Equipe Oneplay">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.simplejson"/>
+        <import addon="script.module.simplejson"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
     </extension>
-  </extension>
+
+
     <extension point="xbmc.addon.metadata">
-        <summary>Os Melhores animes aqui!.</summary>
-        <description>Animes Play oferece diversos animes para o kodi.</description>
-        <disclaimer>Animes Play não hospeda os conteudos, todos os animes são links agregados ao addon.</disclaimer>
+        <summary>Os Melhores animes aqui</summary>
+        <description>Animes Play oferece diversos animes para o kodi</description>
         <platform>all</platform>
     </extension>
 </addon>
