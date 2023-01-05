@@ -264,23 +264,6 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.animesplay" version="1.0.2" name="[B]Animes [COLOR yellow]Play[/COLOR][/B]" provider-name="Equipe Oneplay">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.simplejson"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
-    </extension>
-
-
-    <extension point="xbmc.addon.metadata">
-        <summary>Os Melhores animes aqui</summary>
-        <description>Animes Play oferece diversos animes para o kodi</description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
 <addon id="plugin.video.doramasplus" version="1.0.2" name="[COLOR pink]DORAMAS[/COLOR]" provider-name="OnePlay Team">
     <requires>
         <import addon="script.module.simplejson" />
