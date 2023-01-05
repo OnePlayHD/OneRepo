@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="hunter.fm" name="[B]Hunter.FM[/B]" version="0.0.1" provider-name="Equipe OnePlay"> 
+<requires>
+	<import addon="script.module.simplejson"/>
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.requests"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="default.py">
+	<provides>audio</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+    <summary>Hunter.FM</summary>
+    <description>Hunter.FM é um addon para repdrodução das radios do grupo hunter.fm</description>
+    <disclaimer>Nao somos filiados ao xbmc kodi nem ao hunter.fm, esse é um plugin independente</disclaimer>
+	<website>https://hunter.fm/</website>
+    <platform>all</platform>
+	<assets>
+		<icon>icon.jpg</icon>
+		<fanart>fanart.png</fanart>
+    </assets>
+</extension>
+</addon>

@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="hunter.fm" name="[B]Hunter.FM[/B]" version="0.0.1" provider-name="Equipe OnePlay">
+<requires>
+	<import addon="script.module.simplejson"/>
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.requests"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="default.py">
+	<provides>audio</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+    <summary>Hunter.FM</summary>
+    <description>Hunter.FM Ã© um addon para repdroduÃ§Ã£o das radios do grupo hunter.fm</description>
+    <disclaimer>Nao somos filiados ao xbmc kodi nem ao hunter.fm, esse Ã© um plugin independente</disclaimer>
+	<website>https://hunter.fm/</website>
+    <platform>all</platform>
+	<assets>
+		<icon>icon.jpg</icon>
+		<fanart>fanart.png</fanart>
+    </assets>
+</extension>
+</addon>
+
 <addon	id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]ONE[/COLOR][COLOR white]PLAY[/COLOR][/B]" version="1.08"	provider-name="TEAM [COLOR aquamarine]ONE[/COLOR][COLOR white]PLAY[/COLOR]">
 
 	<requires>
@@ -242,19 +264,19 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.animesplay" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]" version="1.0.2" provider-name="Equipe OnePlay">
+<addon id="plugin.video.animesplay" version="1.0.2" name="[B]Animes [COLOR yellow]Play[/COLOR][/B]" provider-name="Equipe Oneplay">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.simplejson"/>
+        <import addon="script.module.simplejson"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
     </extension>
-  </extension>
+
+
     <extension point="xbmc.addon.metadata">
-        <summary>Os Melhores animes aqui!.</summary>
-        <description>Animes Play oferece diversos animes para o kodi.</description>
-        <disclaimer>Animes Play nÃ£o hospeda os conteudos, todos os animes sÃ£o links agregados ao addon.</disclaimer>
+        <summary>Os Melhores animes aqui</summary>
+        <description>Animes Play oferece diversos animes para o kodi</description>
         <platform>all</platform>
     </extension>
 </addon>
