@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.iptvpremium" name="[B]IPTV PREMIUM[/B]" version="1.0.1" provider-name="Equipe OnePlay">
+    <requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+	<extension point="xbmc.addon.repository" name="[B]IPTV PREMIUM[/B]">
+		<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
+		<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Cliente IPTV para painel Xtream Codes</summary>
+		<description>Cliente para usuarios de IPTV do Xtream Codes</description>
+		<disclaimer>IPTV Premium não tem relação com a Kodi team</disclaimer>
+        <platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>
+- IPTV Premium em python 2, 1.0.0
+- correção bugs 1.0.1
+		</news>
+	</extension>
+</addon>

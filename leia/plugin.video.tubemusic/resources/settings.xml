@@ -1,0 +1,12 @@
+<settings>
+	<category label="Lengendas">
+		<setting label="Ativar legendas" id="subtitle" type="bool" default="true" />
+		<setting label="Idioma da legenda" id="lang_subtitle" type="enum" values="English|Português Brasil" default="0" />
+	</category>
+	<category label="Player">
+		<setting label="Repetir playlist" id="repeat" type="bool" default="false" />
+	</category>
+	<category label="Playlist do Youtube">
+		<setting label="URL" id="playlisturl" type="text" default="" />
+	</category>	
+</settings>

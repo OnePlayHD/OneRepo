@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="hunter.fm" name="[B]Hunter.FM[/B]" version="0.0.1" provider-name="Equipe OnePlay">
+<requires>
+	<import addon="script.module.simplejson"/>
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.requests"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="default.py">
+	<provides>audio</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+    <summary>Hunter.FM</summary>
+    <description>Hunter.FM Ã© um addon para repdroduÃ§Ã£o das radios do grupo hunter.fm</description>
+    <disclaimer>Nao somos filiados ao xbmc kodi nem ao hunter.fm, esse Ã© um plugin independente</disclaimer>
+	<website>https://hunter.fm/</website>
+    <platform>all</platform>
+	<assets>
+		<icon>icon.jpg</icon>
+		<fanart>fanart.png</fanart>
+    </assets>
+</extension>
+</addon>
+
+<addon	id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]ONE[/COLOR][COLOR white]PLAY[/COLOR][/B]" version="1.08"	provider-name="TEAM [COLOR aquamarine]ONE[/COLOR][COLOR white]PLAY[/COLOR]">
+
+	<requires>
+    	<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+
+	<extension point="xbmc.addon.repository" name="OnePlay Repositorio">
+		<dir>
+    		<info compressed="false">https://github.com/Gujal00/smrzips/raw/master/addons.xml</info>
+    		<checksum>https://github.com/Gujal00/smrzips/raw/master/addons.xml.md5</checksum>
+    		<datadir zip="true">https://github.com/Gujal00/smrzips/raw/master/zips</datadir>
+			<hashes>false</hashes>
+		</dir>
+
+  		<dir minversion="17.0.0" maxversion="18.9.0">
+			<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
+			<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia</datadir>
+			<hashes>false</hashes>
+    	</dir>
+
+  		<dir minversion="18.9.1">
+			<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml</info>
+			<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/matrix</datadir>
+			<hashes>false</hashes>
+    	</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="pt_br">Repositorio Oficial OnePlay</summary>
+        <description lang="pt_br">Repositorio OnePlay - AGREGADOR de ADDONS, assim como o Google.com, apenas agrega e organiza ADDON OnePlay e Complementos.</description>
+        <disclaimer	lang="pt_br"></disclaimer>
+		<platform>all</platform>
+		<source>https://github.com/OnePlayHD/OneRepo</source>
+		 <assets>
+            <icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+        </assets>
+	    <news></news>
+	</extension>
+</addon>
+
+<addon id="plugin.audio.4sharedMP3" name="[B][COLOR deepskyblue]4shared MP3[/COLOR][/B]" version="1.0.0" provider-name="Equipe OnePlay">
+<requires>
+	<import addon="xbmc.python" version="3.0.0"/>
+	<import addon="script.module.simplejson"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>audio</provides>
+</extension>
+<extension point="xbmc.addon.repository" name="[B][COLOR deepskyblue]4shared MP3[/COLOR][/B]">
+	<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml</info>
+	<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml.md5</checksum>
+	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/matrix</datadir>
+	<hashes>false</hashes>
+</extension>
+<extension point="xbmc.addon.metadata">
+    <summary lang="pt_br">4Shared MP3.</summary>
+    <description lang="pt_br">4Shared MP3 Ã© um addon para repdroduÃ§Ã£o e donwload de mÃºsicas em mp3.</description>
+    <disclaimer lang="pt_br">4Shared MP3 utiliza o servidor de compartilhamento 4shared para localizar arquivos mp3.</disclaimer>
+	<website>http://www.oneplayhd.com/</website>
+    <platform>all</platform>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<screenshot>resources/media/screenshot.jpg</screenshot>
+    </assets>
+	<news>
+v1.0.0
+- InauguraÃ§Ã£o do 4shared MP3 em Python 3
+	</news>
+</extension>
+</addon>
+
+<addon id="plugin.audio.OneMusic" name="[B]OneMusic[/B]" version="1.0.1" provider-name="Equipe OnePlay">
+<requires>
+	<import addon="script.module.simplejson"/>
+	<import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>audio</provides>
+</extension>
+<extension point="xbmc.addon.repository" name="[B]OneMusic[/B]">
+	<dir minversion="16.0.0" maxversion="18.9.0">
+		<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
+		<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia</datadir>
+		<hashes>false</hashes>
+	</dir>
+	<dir minversion="18.9.1">
+		<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml</info>
+		<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/matrix</datadir>
+		<hashes>false</hashes>
+	</dir>
+</extension>
+<extension point="xbmc.addon.metadata">
+    <summary>OneMusic</summary>
+    <description>OneMusic Ã© um addon para repdroduÃ§Ã£o e donwload de mÃºsicas em mp3.</description>
+    <disclaimer>OneMusic utiliza o servidor dedicado para localizar arquivos mp3.</disclaimer>
+	<website>http://www.oneplayhd.com/</website>
+    <platform>all</platform>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<screenshot>resources/media/screenshot.jpg</screenshot>
+    </assets>
+</extension>
+</addon>
+
+<addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" version="2.0.7" provider-name="drinfernoo, slamious">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
+        <import addon="script.speedtester" optional="true" version="1.1.2" />
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+
+    <extension point="xbmc.service" library="startup.py" start="startup" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[COLOR limegreen]Open[/COLOR]Wizard</summary>
+        <description lang="en">[COLOR limegreen]Open[/COLOR]Wizard offers many maintenance features, selective add-on data saving, and automated build installs.</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <source>https://www.github.com/a4k-openproject/plugin.program.openwizard/</source>
+        <news>
+2.0.7
+ - Fix Error when using default log settings
+2.0.6
+ - Fix regex for formatting tags
+ - Fix theme selection after build install
+ - Fix downloading into invalid path
+2.0.5
+ - Add Enable All Add-ons after Build Install
+2.0.4
+ - Fix leftover broken dialogs
+2.0.3
+ - Don't show previous version builds in Matrix
+2.0.2
+ - Replace remaining occurences of LOGNOTICE
+2.0.1
+ - Add attribution to @slamious
+2.0.0
+ - Initial Matrix support
+1.4.5
+ - Fix bugs with unintended files being cleared`
+1.4.4
+ - Transfer ownership
+1.4.3
+ - Fix missing artwork on items (thanks @xulek)
+1.4.2
+ - A few bug fixes
+1.4.1
+ - Fix crash on fresh installs
+1.4.0
+ - Fix APK Installer
+ - Convert official APK downloader to use official script
+ - Add scrollbar to Save Data dialog
+ - Fix skin path in build info
+1.3.7
+ - Fix import lock error
+1.3.6
+ - Fix notifications
+ - Cleanup log files
+1.3.5
+ - Add Fen
+ - Add Shadow
+ - Fix restoring saved data every boot
+1.3.4
+ - Fix bad indent
+1.3.3
+ - Fix Unicode characters in notification window
+1.3.2
+ - Fix build restore
+1.3.1
+ - Fix "Keep Login Info" menu
+1.3.0
+ - Fix formatting of saved restore times
+ - Fix local build zip being deleted on restore
+ - Add YouTube API saving
+ - Remove broken context menus
+ - Fix repeating dialogs from shortcuts/favorites
+ - Remove "Normal Install" option
+ - Add "Logging Tools" menu
+ - Add option to save guisettings.xml
+ - Add TMDbHelper Fanart.tv saving
+ - More fixes for OS X
+ - Fix Seren Fanart.tv saving
+1.2.9
+ - Fix NuMb3r5 cache clearing
+ - Fix hang during repo force check
+ - Fix logins being restored every startup
+ - Fix some file permission errors
+ - Fix OS X backup errors
+1.2.8
+ - Add Gaia PM OAuth
+ - Fix binary add-on restoration
+ - Fix some issues with old settings
+ - Fix timing on many startup tasks
+1.2.7
+ - Add TheMovieDb Helper
+1.2.6
+ - Fix Seren PM OAuth
+1.2.5
+ - Fix typo in debridit.py
+1.2.4
+ - Cover more edge cases during binary detection
+1.2.3
+ - Fix notification ID bug
+1.2.2
+ - Add Seren PM OAuth
+ - Add AllDebrid spport for Gaia, Seren, ResolveURL, and URLResolver
+1.2.1
+ - General bug fixes
+1.2.0
+ - Silence save data notifications on startup
+ - Fix Addon Installer menu
+ - Convert addons.txt to JSON format
+1.1.1
+ - Fix error on advancedsettings categories
+1.1.0
+ - Add back advancedsettings area under System Tweaks/Fixes
+ - Rudimentary version of advancedsettings editor. Can currently only handle editing pre-existing tags under 'cache' and 'network'.
+ - Convert advanced.txt to JSON format
+ - Add "built-in" advancedsettings.xml presets
+1.0.3
+ - Update artwork
+ - Fix rare issues with URLs not working
+ - Fix repetitive build prompt (again)
+ - Fix builds downloading twice
+ - Fix title coloring on notifications
+ - Fix auto repo install
+ - Fix first run settings not being respected
+1.0.2
+ - Fix crash in login menu
+ - Fix auto install repo
+1.0.1
+ - Fix double startup
+ - Fix repetitive build prompt
+ - Fix main menu not opening on Krypton
+ - Fix notification timeout
+ - Fix crash in Trakt menu
+1.0.0
+ - Initial Commit
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.animesplay.matrix" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]" version="1.0.4.matrix.1" provider-name="Equipe OnePlay">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.simplejson"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="pt_br">Os Melhores animes aqui!.</summary>
+		<description lang="pt_br">Animes Play oferece diversos animes para o kodi.</description>
+		<disclaimer lang="pt_br">Animes Play nÃ£o hospeda os conteudos, todos os animes sÃ£o links agregados ao addon.</disclaimer>
+        <platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>
+- AnimesPlay em python 3, 1.0.1.matrix.1
+		</news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.doramasplus" version="1.0.2" name="[COLOR pink]DORAMAS[/COLOR]" provider-name="OnePlay Team">
+    <requires>
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+		<import addon="script.module.requests"/>
+		<import addon="script.module.beautifulsoup4"/>
+		<import addon="script.module.routing"/>
+		<import addon="script.module.resolveurl" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary lang="pt">Doramas Ã© um addon de dramas asiaticos</summary>
+		<description lang="pt">Todos os videos sÃ£o de sites de terceiros, nÃ£o hospedamos conteudo</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.jpg</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.f4mTester" version="4.0.8" name="f4mTester" provider-name="Joel e Tiago">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.video.F4mProxy" version="4.0.9"/>
+        <import addon="inputstream.ffmpegdirect"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+        <assets>
+			<icon>icon.png</icon>
+		</assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.iFLix" version="1.0.3" name="[COLOR red]iFlix[/COLOR]" provider-name="OnePlay Team">
+    <requires>
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+		<import addon="script.module.requests"/>
+		<import addon="script.module.beautifulsoup4"/>
+        <import addon="script.module.routing"/>
+        <import addon="script.module.resolveurl" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary lang="pt">iFLix Ã© um addon que exibe filmes e series</summary>
+		<description lang="pt">Todos os videos sÃ£o de sites terceiros, nÃ£o hospedamos conteudo</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.iptvpremium.matrix" name="[B]IPTV PREMIUM[/B]" version="1.0.1.matrix.1" provider-name="Equipe OnePlay">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.simplejson"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+	<extension point="xbmc.addon.repository" name="[B]IPTV PREMIUM[/B]">
+		<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml</info>
+		<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/matrix</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="pt_br">Cliente IPTV para painel Xtream Codes</summary>
+		<description lang="pt_br">Cliente para usuarios de IPTV do Xtream Codes</description>
+		<disclaimer lang="pt_br">IPTV Premium nÃ£o tem relaÃ§Ã£o com a Kodi team</disclaimer>
+        <platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>
+- IPTV Premium em python 3, 1.0.0.matrix.1
+- correÃ§Ã£o bugs, 1.0.1.matrix.1
+		</news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.OnePlay.Matrix" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.1.3+matrix.1" provider-name="Equipe OnePlay">
+    <requires>
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+		<import addon="script.module.requests"/>
+		<import addon="script.module.beautifulsoup4"/>
+        <import addon="script.module.resolveurl" optional="true"/>
+        <import addon="script.module.jsbeautifier" optional="true"/>
+        <import addon="script.module.inputstreamhelper" optional="true"/>
+        <import addon="inputstream.ffmpegdirect" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary lang="pt">OnePlay Ã© um plugin que exibe tv,filmes,series, animes, desenhos e novelas</summary>
+		<description lang="pt">Todos os videos sÃ£o de sites terceiros, nÃ£o hospedamos conteudo</description>
+        <platform>all</platform>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.picante" version="1.0.1" name="[COLOR red]PICANTE[/COLOR]" provider-name="OnePlay Team">
+    <requires>
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+		<import addon="script.module.requests"/>
+		<import addon="script.module.beautifulsoup4"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary lang="pt">Picante Ã© um addon de entretenimento adulto</summary>
+		<description lang="pt">Todos os videos sÃ£o de sites adultos, nÃ£o hospedamos conteudo</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.resolvedor" name="Resolvedor" version="1.0.3" provider-name="Zoreu">
+    <requires>
+	    <import addon="script.module.simplejson" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+		<import addon="script.module.requests"/>
+		<import addon="script.module.beautifulsoup4"/>
+		<import addon="script.module.resolveurl"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary lang="pt">Resolvedor Ã© um addon que resolve e reproduz links</summary>
+		<description lang="pt">Todos os videos sÃ£o de responsabilidade de terceiros.</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.rumble.matrix" name="[B]Rumble[/B]" version="1.0.0+matrix.1" provider-name="Oneplay team">
+<requires>
+	<import addon="xbmc.python" version="3.0.0"/>
+	<import addon="script.module.simplejson"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.repository" name="[B]Rumble[/B]">
+	<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml</info>
+	<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml.md5</checksum>
+	<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/matrix</datadir>
+	<hashes>false</hashes>
+</extension>
+<extension point="xbmc.addon.metadata">
+    <summary lang="en">Watch rumble videos.</summary>
+    <summary lang="pt_br">Assista videos do rumble.</summary>
+	<description lang="en">Watch uncensored videos with rumble.</description>
+    <description lang="pt_br">Asssista videos sem censura com o rumble.</description>
+	<disclaimer lang="en">We are not associated with rumble.com or the Kodi Team</disclaimer>
+    <disclaimer lang="pt_br">NÃ£o somos associados Ã  rumble.com nem com o Kodi Team</disclaimer>
+	<website>http://www.oneplayhd.com/</website>
+    <platform>all</platform>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<screenshot>resources/media/screenshot01.jpg</screenshot>
+		<screenshot>resources/media/screenshot02.jpg</screenshot>
+		<screenshot>resources/media/screenshot03.jpg</screenshot>
+    </assets>
+	<news>
+Rumble - v1.0.0.matrix
+	</news>
+</extension>
+</addon>
+
+<addon id="plugin.video.showdebola" version="1.0.4" name="[COLOR lime]SHOW DE BOLA[/COLOR]" provider-name="OnePlay Team">
+    <requires>
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+		<import addon="script.module.requests"/>
+		<import addon="script.module.beautifulsoup4"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary lang="pt">Show de bola Ã© um addon que exibe os jogos aovivo</summary>
+		<description lang="pt">Todos os videos sÃ£o de sites terceiros, nÃ£o hospedamos conteudo</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.thethunder" version="1.1.4" name="[COLOR violet]THUNDER[/COLOR]" provider-name="OnePlay Team">
+    <requires>
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+		<import addon="script.module.beautifulsoup4"/>
+		<import addon="script.module.resolveurl" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="thethunder.py">
+        <provides>video</provides>
+    </extension>
+	<extension point="xbmc.subtitle.module" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Thunder is an addon from the oneplay team that scans videos on the internet without using torrents.</summary>
+		<summary lang="es">Thunder es un complemento del equipo de oneplay que escanea videos en Internet sin usar torrents.</summary>
+		<summary lang="pt">Thunder Ã© um addon da equipe oneplay que faz varredura por videos na internet sem uso de torrent</summary>
+        <description lang="en">Free Video Streaming Through Hosting Providers</description>
+		<description lang="es">TransmisiÃ³n de video gratuita a travÃ©s de proveedores de alojamiento</description>
+		<description lang="pt">Streaming de videos gratuitos atraves de provedores de hospedagem</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+			<screenshot>resources/media/thunder1.png</screenshot>
+			<screenshot>resources/media/thunder2.png</screenshot>
+			<screenshot>resources/media/thunder3.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.tubemusic" name="Tube Music" version="1.0.5" provider-name="OnePlay team">
+<requires>
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.requests"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+	<summary lang="en">tube music is a video clip add-on</summary>
+	<summary lang="pt">tube music Ã© um complemento de video clipes</summary>
+	<description lang="en">watch artist videos without ads</description>
+	<description lang="pt">assista videos de artistas sem anuncios</description>
+    <disclaimer lang="en">The author is in no way affiliated with the Kodi, Team Kodi or the XBMC Foundation. This is a non-profit resource organized solely for educational purposes and protected by the fair use doctrine of the Copyright Act, specifically section 107, which promotes freedom of expression by allowing unlicensed use of copyrighted works.</disclaimer>
+	<disclaimer lang="pt">O autor nao e de forma alguma afiliado ao Kodi, Team Kodi ou a XBMC Foundation. Este e um recurso sem fins lucrativos, organizado exclusivamente para fins educacionais e protegido pela doutrina de uso justo da Lei de Direitos Autorais, especificamente a secao 107, que promove a liberdade de expressao, permitindo o uso nao licenciado de obras protegidas por direitos autorais.</disclaimer>
+    <platform>all</platform>
+	<assets>
+       <icon>icon.png</icon>
+       <fanart>fanart.jpg</fanart>
+    </assets>
+	<news>
+    - first release 1.0.0
+    - open playplaylist 1.0.1
+    - open playlist from youtube 1.0.2
+    - 1.0.4 fix playlists
+	</news>
+</extension>
+</addon>
+
+<addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.2">
+  <extension point="xbmc.addon.repository" name="SlyGuy Repository">
+    <dir>
+      <info compressed="false">https://k.slyguy.xyz/.repo/addons.xml</info>
+      <checksum>https://k.slyguy.xyz/.repo/addons.xml.md5</checksum>
+      <datadir zip="true">https://k.slyguy.xyz/.repo/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en">Addons by SlyGuy</description>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news></news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.encrypttool" name="Encrypt add-on" version="1.0.2" provider-name="Oneplay team">
+    <requires>
+        <import addon="script.module.six"/>
+        <import addon="script.module.kodi-six"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Encrypt add-on</summary>
+        <description lang="en">Encrypt add-on is an addon to encrypt script python</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 1, 12 June 2022</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.encrypttool.lambda" name="Encrypt add-on, lambda" version="1.0.1" provider-name="Oneplay team">
+    <requires>
+        <import addon="script.module.six"/>
+        <import addon="script.module.kodi-six"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Encrypt add-on</summary>
+        <description lang="en">Encrypt add-on is an addon to encrypt script python</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 1, 12 June 2022</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.module.jsbeautifier" name="Jsbeautifier" version="1.10.3.1" provider-name="jsbeautifier">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.six" version="1.6.1" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Written by Einar Lielmanis, maintained and evolved by Liam Newman.</summary>
+        <description>Beautify, unpack or deobfuscate JavaScript. Handles popular online obfuscators.</description>
+        <platform>all</platform>
+        <license>MIT</license>
+        <source>https://pypi.org/project/jsbeautifier/</source>
+        <website>https://beautifier.io/</website>
+    </extension>
+</addon>
+
+<addon id="script.module.kodi-six"
+       name="Kodi Six"
+       version="0.1.3.1"
+       provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Wrappers around Kodi Python API for seamless Python 2/3 compatibility</summary>
+    <description lang="en_GB">Wrappers around Kodi Python API that normalize handling of textual and byte strings in Python 2 and 3.</description>
+    <platform>all</platform>
+    <license>GPL v.3</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=327883</forum>
+    <source>https://github.com/romanvm/kodi.six</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <news>0.1.3:
+- Fix non-UTF-8 byte string decoding in Python 2.</news>
+  </extension>
+</addon>
+
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.58" provider-name="gujal">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.certifi" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="plugin.googledrive" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.module.resolveurl.xxx" version="2.1.18" name="Adult Resolver SMR Extension" provider-name="gujal">
+	<requires>
+		<!-- <import addon="xbmc.python" version="2.1.0"/> -->
+        <import addon="script.module.resolveurl" version="5.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Resolve adult video host URL's to be playable in XBMC/Kodi.</summary>
+		<description lang="en">Resolve adult video host URL's to be playable in XBMC/Kodi.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.module.six"
+       name="six"
+       version="1.15.0+matrix.1"
+       provider-name="gutworth">
+  <requires>
+    <import addon="xbmc.python"
+    		version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Python 2 and 3 compatibility utilities.</summary>
+    <description lang="en_GB">Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing over the differences between the Python versions with the goal of writing Python code that is compatible on both Python versions. See the documentation for more information on what is provided.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/benjaminp/six</source>
+    <website>https://pypi.org/project/six/</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.oneplayvip.downloader" name="ONEPLAY VIP DOWNLOADER" version="1.0.2" provider-name="Oneplay team">
+    <requires>
+        <import addon="script.module.six"/>
+        <import addon="script.module.kodi-six"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Oneplay vip downloader, download apk s from oneplay</summary>
+		<summary lang="pt">Oneplay vip downloader, baixe apk s do oneplay</summary>
+        <description lang="en">Oneplay vip is a paid iptv service</description>
+		<description lang="pt">Oneplay vip Ã© um serviÃ§o pago de iptv</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 1, 12 June 2022</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+			<screenshot>resources/images/1.jpg</screenshot>
+			<screenshot>resources/images/2.jpg</screenshot>
+			<screenshot>resources/images/3.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.video.F4mProxy"
+	     name="F4mProxy"
+	     version="4.0.9"
+	     provider-name="Joel e Tiago">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+        <import addon="inputstream.ffmpegdirect" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Proxy for f4m</summary>
+		<description lang="en">Use this addon to play F4m v1 and v2 streams</description>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon
+		id="vkkodi.repo" name="[B][COLOR yellow]  Vikings  [COLOR orange]Repositorio Vikings Oficial! A Casa Oficial dos Melhores Add-ons BR[/B][/COLOR]"
+		version="3.15"
+		provider-name="[B][COLOR gold]Vikings TEAM[/B][/COLOR]">
+
+		<requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+		</requires>
+
+		<extension point="xbmc.addon.repository" name=".Vikings Repositorio">
+
+
+	<dir>
+			<info compressed="false">https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master/addons.xml</info>
+			<checksum>https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master</datadir>
+			<hashes>false</hashes>
+    </dir>
+
+	<dir minversion="16.0.0" maxversion="18.9.0">
+			<info compressed="false">https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master/leia/addons.xml</info>
+			<checksum>https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master/leia</datadir>
+			<hashes>false</hashes>
+    </dir>
+
+   <dir minversion="18.9.1">
+			<info compressed="false">https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master/matrix/addons.xml</info>
+			<checksum>https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/vikingskoditeam/vikingskoditeam.github.io/raw/master/matrix</datadir>
+			<hashes>false</hashes>
+    </dir>
+
+	</extension>
+
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="pt_br"></summary>
+        <description lang="pt_br"></description>
+		<platform>all</platform>
+		<source>http://raw.github.com/vikingskoditeam/vikingskoditeam.github.io/master</source>
+		 <assets>
+            <icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+        </assets>
+
+	<news></news>
+
+	<summary>RepositÃ³rio Vikings levando os melhores addons a sua familia e aos quatro cantos do Mundo!!!</summary>
+
+	<description>
+                    [B][COLOR orange]RepositÃ³rio Vikings, SEM BANIMENTO! SEM SCRIPT MALICIOSO!! PURO, LIMPO E SIMPLES!!![/COLOR][/B]
+					[B][COLOR red]RepositÃ³rio oficial Vikings Build - Proibido reproduÃ§Ã£o total ou parcial sem prÃ©via autorizaÃ§Ã£o[/COLOR][/B]
+					[B][COLOR white]Addons deste repositÃ³rio Ã© de uso gratuito!![/COLOR][/B]
+					[B][COLOR firebrick]Proibido a venda dos add-ons contidos neste repositÃ³rio[/COLOR][/B]
+	</description>
+
+<disclaimer>[B][COLOR orange]RepositÃ³rio Vikings Ã© apenas um AGREGADOR de ADDONS e, assim como o Google.com, apenas agrega e organiza ADDONS DE TERCEIROS. NÃ£o somos responsÃ¡veis pelos arquivos aqui encontrados.[/COLOR][/B]</disclaimer>
+
+	</extension>
+</addon>
+
+<addon id="xbmc.python" version="3.0.0" name="xbmc.python" provider-name="Team Kodi">
+  <backwards-compatibility abi="3.0.0"/>
+  <requires>
+    <import addon="xbmc.core" version="0.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension-point id="script" schema="script.xsd"/>
+  <extension-point id="subtitles" schema="script.xsd"/>
+  <extension-point id="lyrics" schema="script.xsd"/>
+  <extension-point id="weather" schema="script.xsd"/>
+  <extension-point id="library" schema="script.xsd"/>
+  <extension-point id="screensaver" schema="script.xsd"/>
+  <extension-point id="plugin" schema="pluginsource.xsd"/>
+  <extension-point id="context.item" schema="contextitem.xsd"/>
+</addon>
+</addons>
