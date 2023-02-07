@@ -1,5 +1,0 @@
-<settings>
-<category label="F4MTESTER">
-	<setting label="ATIVAR F4M" id="f4m" type="bool" default="false" />
-</category>
-</settings>
