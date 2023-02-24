@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.tubemusic" name="Tube Music" version="1.0.5" provider-name="OnePlay team">
+<requires>
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.requests"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+	<summary lang="en">tube music is a video clip add-on</summary>
+	<summary lang="pt">tube music é um complemento de video clipes</summary>
+	<description lang="en">watch artist videos without ads</description>
+	<description lang="pt">assista videos de artistas sem anuncios</description>
+    <disclaimer lang="en">The author is in no way affiliated with the Kodi, Team Kodi or the XBMC Foundation. This is a non-profit resource organized solely for educational purposes and protected by the fair use doctrine of the Copyright Act, specifically section 107, which promotes freedom of expression by allowing unlicensed use of copyrighted works.</disclaimer>
+	<disclaimer lang="pt">O autor nao e de forma alguma afiliado ao Kodi, Team Kodi ou a XBMC Foundation. Este e um recurso sem fins lucrativos, organizado exclusivamente para fins educacionais e protegido pela doutrina de uso justo da Lei de Direitos Autorais, especificamente a secao 107, que promove a liberdade de expressao, permitindo o uso nao licenciado de obras protegidas por direitos autorais.</disclaimer>
+    <platform>all</platform>
+	<assets>
+       <icon>icon.png</icon>
+       <fanart>fanart.jpg</fanart>
+    </assets>
+	<news>
+    - first release 1.0.0
+    - open playplaylist 1.0.1
+    - open playlist from youtube 1.0.2
+    - 1.0.4 fix playlists
+	</news>
+</extension>
+</addon>

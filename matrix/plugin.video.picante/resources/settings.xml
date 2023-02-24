@@ -1,0 +1,5 @@
+<settings>
+<category label="CONTROLE DOS PAIS">
+	<setting label="SENHA DE ACESSO" id="parental_pass" type="text" default="" option="hidden"/>
+</category>
+</settings>

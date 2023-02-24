@@ -1,0 +1,36 @@
+<settings>
+<category label="VIP">
+	<setting label="[COLOR lightblue]Configurações de Acesso[/COLOR] [COLOR gold](Vip):[/COLOR]" type="lsep"/>
+	<setting label="Usuário" id="username" type="text" default=""/>
+	<setting label="Senha" id="password" type="text" default="" enable="!eq(-1,false)" option="hidden"/>
+	<setting label="Servidor" id="servervip" type="text" default="" enable="!eq(-1,false)"/>	
+	<setting label="Saida de Transmissão VIP" id="saida" type="enum" values="TS|M3U8" default="0" />
+	<setting label="Exibir Menu VIP" id="exibirvip" type="bool" default="true" />
+	<setting label="[COLOR lightblue]Download app android[/COLOR]" type="lsep"/>
+    <setting label="[COLOR white]OnePlay Pro: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunPlugin(plugin://plugin.video.OnePlay?action=oneplaypro)"/>
+    <setting label="[COLOR white]OnePlay Xtreme: [COLOR lime]Recomendado[/COLOR]" type="action" action="RunPlugin(plugin://plugin.video.OnePlay?action=oneplayxtreme)"/>
+	<setting label="[COLOR lightblue]Download app android[/COLOR]" type="lsep"/>
+    <setting label="[COLOR white]Horizon P2P: Outro Sistema[/COLOR]" type="action" action="RunPlugin(plugin://plugin.video.OnePlay?action=horizonp2p)"/>
+</category>
+<category label="Proxy">
+		<setting label="[COLOR lightblue]Opções do Proxy:[/COLOR]" type="lsep"/>
+		<setting label="Ativar Proxy" id="proxy" type="bool"  default="false" />
+		<setting label="[COLOR yellow][B]Utilize apenas se a operadora estiver bloqueando o servidor[/B][/COLOR]" type="bool"/>
+		<setting label="[COLOR yellow][B]OnePlay.[/B][/COLOR]" type="bool"/>
+		<setting label="[COLOR yellow][B]Pode ficar um pouco lento[/B][/COLOR]" type="bool"/>
+		<setting label="[COLOR yellow][B]Não se aplica a servidores de IPTV como o VIP esses tem[/B][/COLOR]" type="bool"/>
+		<setting label="[COLOR yellow][B]conexão direta.[/B][/COLOR]" type="bool"/>
+		<setting label="[COLOR yellow][B]Utilize VPN se a operadora bloqueia o IPTV.[/B][/COLOR]" type="bool"/>
+</category>
+<category label="Controle dos Pais">
+		<setting label="[COLOR lightblue]Controle dos Pais:[/COLOR]" type="lsep"/>
+		<setting label="Exibir Menu Adultos (Servidor 2)" id="adult" type="bool" default="false" />
+		<setting label="Entre aqui para alterar senha, padrão: [COLOR yellow][B]0069[/B][/COLOR]" type="action" action="RunPlugin(plugin://plugin.video.OnePlay?action=setpassword)"/>
+</category>
+<category label="Apoio">
+	<setting label="[COLOR lightblue]Suporte:[/COLOR]" type="lsep"/>
+    <setting label="[COLOR aquamarine]One[/COLOR][COLOR white]Play[/COLOR]: Site" type="action" action="RunPlugin(plugin://plugin.video.OnePlay?action=supportsite)"/>
+    <setting label="[COLOR aquamarine]One[/COLOR][COLOR white]Play[/COLOR]: Facebook" type="action" action="RunPlugin(plugin://plugin.video.OnePlay?action=supportfacebook)"/>
+    <setting label="[COLOR aquamarine]One[/COLOR][COLOR white]Play[/COLOR]: Telegram" type="action" action="RunPlugin(plugin://plugin.video.OnePlay?action=supporttelegram)"/>
+</category>
+</settings>
