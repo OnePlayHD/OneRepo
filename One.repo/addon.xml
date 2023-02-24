@@ -14,16 +14,16 @@
 		</dir>
 
   		<dir minversion="17.0.0" maxversion="18.9.0">
-			<info compressed="false">https://onerepo.oneplayhd.com/leia/addons.xml</info>
-			<checksum>https://onerepo.oneplayhd.com/leia/addons.xml.md5</checksum>
-			<datadir zip="true">https://onerepo.oneplayhd.com/leia</datadir>
+			<info compressed="false">https://repository.oneplayhd.com/leia/addons.xml</info>
+			<checksum>https://repository.oneplayhd.com/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://repository.oneplayhd.com/leia</datadir>
 			<hashes>false</hashes>
     	</dir>
 
   		<dir minversion="18.9.1">
-			<info compressed="false">https://onerepo.oneplayhd.com/matrix/addons.xml</info>
-			<checksum>https://onerepo.oneplayhd.com/matrix/addons.xml.md5</checksum>
-			<datadir zip="true">https://onerepo.oneplayhd.com/matrix</datadir>
+			<info compressed="false">https://repository.oneplayhd.com/matrix/addons.xml</info>
+			<checksum>https://repository.oneplayhd.com/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://repository.oneplayhd.com/matrix</datadir>
 			<hashes>false</hashes>
     	</dir>
 	</extension>
