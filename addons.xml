@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon	id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]ONE[/COLOR][COLOR white]PLAY[/COLOR][/B]" version="1.08"	provider-name="TEAM [COLOR aquamarine]ONE[/COLOR][COLOR white]PLAY[/COLOR]">
+<addon	id="One.repo" name="[B][COLOR white]Repositorio[/COLOR]: [COLOR aquamarine]ONE[/COLOR][COLOR white]PLAY[/COLOR][/B]" version="1.11"	provider-name="TEAM [COLOR aquamarine]ONE[/COLOR][COLOR white]PLAY[/COLOR]">
 
 	<requires>
     	<import addon="xbmc.addon" version="12.0.0"/>
@@ -15,16 +15,16 @@
 		</dir>
 
   		<dir minversion="17.0.0" maxversion="18.9.0">
-			<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml</info>
-			<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/leia/addons.xml.md5</checksum>
-			<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/leia</datadir>
+			<info compressed="false">https://onerepo.oneplayhd.com/leia/addons.xml</info>
+			<checksum>https://onerepo.oneplayhd.com/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://onerepo.oneplayhd.com/leia</datadir>
 			<hashes>false</hashes>
     	</dir>
 
   		<dir minversion="18.9.1">
-			<info compressed="false">https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml</info>
-			<checksum>https://github.com/OnePlayHD/OneRepo/raw/master/matrix/addons.xml.md5</checksum>
-			<datadir zip="true">https://github.com/OnePlayHD/OneRepo/raw/master/matrix</datadir>
+			<info compressed="false">https://onerepo.oneplayhd.com/matrix/addons.xml</info>
+			<checksum>https://onerepo.oneplayhd.com/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://onerepo.oneplayhd.com/matrix</datadir>
 			<hashes>false</hashes>
     	</dir>
 	</extension>
