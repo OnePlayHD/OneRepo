@@ -42,6 +42,23 @@
 	</extension>
 </addon>
 
+<addon id="plugin.video.f4mTester" version="3.0.1" name="f4mTester" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="3.0.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+
+
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.video.OnePlay" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.1.3" provider-name="Equipe OnePlay">
     <requires>
         <import addon="script.module.simplejson" />
@@ -67,6 +84,52 @@
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
+</addon>
+
+<addon id="script.oneplayvip.downloader" name="ONEPLAY VIP DOWNLOADER" version="1.0.2" provider-name="Oneplay team">
+    <requires>
+        <import addon="script.module.six"/>
+        <import addon="script.module.kodi-six"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Oneplay vip downloader, download apk s from oneplay</summary>
+		<summary lang="pt">Oneplay vip downloader, baixe apk s do oneplay</summary>
+        <description lang="en">Oneplay vip is a paid iptv service</description>
+		<description lang="pt">Oneplay vip Ã© um serviÃ§o pago de iptv</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 1, 12 June 2022</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+			<screenshot>resources/images/1.jpg</screenshot>
+			<screenshot>resources/images/2.jpg</screenshot>
+			<screenshot>resources/images/3.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.video.F4mProxy"
+	     name="F4mProxy"
+	     version="3.0.1"
+	     provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+  </extension>
+
+
+
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Proxy for f4m</summary>
+    <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
+  </extension>
 </addon>
 
 <addon id="xbmc.python" version="2.26.0" provider-name="Team Kodi">
