@@ -12,7 +12,7 @@ icon = addon.getAddonInfo('icon')
 translate = xbmcvfs.translatePath if six.PY3 else xbmc.translatePath
 dialog = xbmcgui.Dialog()
 handle = int(sys.argv[1])
-update_version = '11.02.2023'
+update_version = '23.02.2023'
 
 def infoDialog(message, heading=addonname, iconimage='', time=3000, sound=False):
     if iconimage == '':
