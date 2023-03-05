@@ -1,9 +1,14 @@
 <settings>
-<category label="PLAYER">
-	<setting label="Type of Player" id="player_type" type="enum" values="inputstream.ffmpegdirect|F4mProxy" default="1" />
-	<setting label="Ask on playback?" id="ask" type="bool" default="false" />
-</category>
 <category label="IPTV">
-	<setting label="URL" id="iptv" type="text" default=""/>
+	<setting label="LISTA 1" id="lista1" type="text" default=""/>
+	<setting label="LISTA 2" id="lista2" type="text" default=""/>
+	<setting label="LISTA 3" id="lista3" type="text" default=""/>
+	<setting label="LISTA 4" id="lista4" type="text" default=""/>
+	<setting label="LISTA 5" id="lista5" type="text" default=""/>
+	<setting label="LISTA 6" id="lista6" type="text" default=""/>
+	<setting label="LISTA 7" id="lista7" type="text" default=""/>
+	<setting label="LISTA 8" id="lista8" type="text" default=""/>
+	<setting label="LISTA 9" id="lista9" type="text" default=""/>
+	<setting label="LISTA 10" id="lista10" type="text" default=""/>	
 </category>
 </settings>
