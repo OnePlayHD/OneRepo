@@ -42,12 +42,14 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.f4mTester" version="4.1.0" name="f4mTester" provider-name="desconhecido">
+<addon id="plugin.video.f4mTester" version="4.1.2" name="f4mTester" provider-name="Equipe Oneplay e Tiago ">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.six" />
         <import addon="script.module.kodi-six" />
 		<import addon="script.module.requests"/>
+		<import addon="script.video.F4mProxy" version="4.0.9"/>
+        <import addon="inputstream.ffmpegdirect"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
@@ -111,6 +113,30 @@
 			<screenshot>resources/images/3.jpg</screenshot>
         </assets>
     </extension>
+</addon>
+
+<addon id="script.video.F4mProxy"
+	     name="F4mProxy"
+	     version="4.0.9"
+	     provider-name="Joel e Tiago">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+        <import addon="inputstream.ffmpegdirect" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Proxy for f4m</summary>
+		<description lang="en">Use this addon to play F4m v1 and v2 streams</description>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
 </addon>
 
 <addon id="xbmc.python" version="3.0.0" name="xbmc.python" provider-name="Team Kodi">
