@@ -7,7 +7,7 @@ import unicodedata
 # =============================
 
 def extrair_versao(nome: str):
-    m = re.search(r"vkkodi\.repo-(\d+(?:\.\d+)*)\.zip", nome)
+    m = re.search(r"One\.repo-(\d+(?:\.\d+)*)\.zip", nome)
     return tuple(map(int, m.group(1).split("."))) if m else ()
 
 def pasta_tem_zip_recursivo(pasta: Path) -> bool:
@@ -25,7 +25,7 @@ def remover_acentos(texto: str) -> str:
 
 def encontrar_repos_mais_recentes(raiz: Path) -> list[Path]:
     encontrados = []
-    for item in raiz.rglob("vkkodi.repo-*.zip"):
+    for item in raiz.rglob("One.repo-*.zip"):
         versao = extrair_versao(item.name)
         if versao:
             encontrados.append((versao, item))
