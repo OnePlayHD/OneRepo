@@ -20,13 +20,12 @@ td { padding:5px 10px; border:1px solid #ddd; }
 <hr/>
 <input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">
 <pre id='listing'>
-📁 <a href="./One.repo/index.html">One.repo/</a>
 📁 <a href="./plugin.video.BrazucaPlay.Matrix/index.html">plugin.video.BrazucaPlay.Matrix/</a>
 </pre>
 <script>
 const searchInput = document.getElementById('search');
 const listing = document.getElementById('listing');
-const items = [['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>'], ['plugin.video.brazucaplay.matrix', '📁 <a href="./plugin.video.BrazucaPlay.Matrix/index.html">plugin.video.BrazucaPlay.Matrix/</a>']];
+const items = [['plugin.video.brazucaplay.matrix', '📁 <a href="./plugin.video.BrazucaPlay.Matrix/index.html">plugin.video.BrazucaPlay.Matrix/</a>']];
 function removerAcentos(str) {
   return str.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
 }
@@ -62,13 +61,12 @@ td { padding:5px 10px; border:1px solid #ddd; }
 <hr/>
 <input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">
 <pre id='listing'>
-📁 <a href="./One.repo/index.html">One.repo/</a>
 📁 <a href="./plugin.video.BrazucaPlay.Matrix/index.html">plugin.video.BrazucaPlay.Matrix/</a>
 </pre>
 <script>
 const searchInput = document.getElementById('search');
 const listing = document.getElementById('listing');
-const items = [['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>'], ['plugin.video.brazucaplay.matrix', '📁 <a href="./plugin.video.BrazucaPlay.Matrix/index.html">plugin.video.BrazucaPlay.Matrix/</a>']];
+const items = [['plugin.video.brazucaplay.matrix', '📁 <a href="./plugin.video.BrazucaPlay.Matrix/index.html">plugin.video.BrazucaPlay.Matrix/</a>']];
 function removerAcentos(str) {
   return str.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
 }
@@ -82,10 +80,3 @@ searchInput.addEventListener('input', () => {
 </script>
 </body>
 </html>
-
-<!-- REPOSITORIO KODI (FORA DO HTML) -->
-<div id="Repositorio-KODI" style="display:none">
-<table>
-<tr><td><a href="One.repo/One.repo-1.15.zip">One.repo/One.repo-1.15.zip</a></td></tr>
-</table>
-</div>
