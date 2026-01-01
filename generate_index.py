@@ -11,7 +11,7 @@ def extrair_versao(nome: str):
     return tuple(map(int, m.group(1).split("."))) if m else ()
 
 def pasta_tem_zip_recursivo(pasta: Path) -> bool:
-    return any(p.suffix.lower() == ".zip" for p in pasta.rglob("*.zip"))
+    return any(ZIP_REPO.match(p.name) for p in pasta.rglob("*.zip"))
 
 def remover_acentos(texto: str) -> str:
     return ''.join(
