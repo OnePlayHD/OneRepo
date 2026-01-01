@@ -6,8 +6,10 @@ import unicodedata
 def extrair_versao(nome: str):
     m = re.search(r"One\.repo-(\d+(?:\.\d+)*)\.zip", nome)
     return tuple(map(int, m.group(1).split("."))) if m else ()
+
 def pasta_tem_zip_recursivo(pasta: Path) -> bool:
     return any(p.suffix.lower() == ".zip" for p in pasta.rglob("*.zip"))
+
 def remover_acentos(texto: str) -> str:
     return ''.join(
         c for c in unicodedata.normalize('NFD', texto)
@@ -30,12 +32,14 @@ def encontrar_repos_mais_recentes(raiz: Path) -> list[Path]:
 def gerar_ou_remover_index(pasta: Path, raiz: Path):
     index = pasta / "index.html"
     tem_zip = pasta_tem_zip_recursivo(pasta)
+
     # Se não é raiz e não tem zip → remove index
     if pasta != raiz and not tem_zip:
         if index.exists():
             index.unlink()
             print(f"🧹 removido: {index}")
         return
+
     # Verifica qualquer zip geral na raiz para decidir manter index na raiz
     tem_zip_geral = pasta_tem_zip_recursivo(raiz)
     if pasta == raiz and not tem_zip_geral:
@@ -43,10 +47,12 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
             index.unlink()
             print(f"🧹 removido: {index}")
         return
+
     # Repositórios oficiais para o bloco Kodi (One.repo-*.zip)
     repos_recentes = encontrar_repos_mais_recentes(raiz)
-        # Gerar conteúdo HTML
-        linhas_html = [
+
+    # Gerar conteúdo HTML
+    linhas_html = [
         "<!DOCTYPE html>",
         "<html lang='pt-BR'>",
         "<head>",
@@ -68,6 +74,7 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
         "<h1>Directory listing</h1>",
         "<hr/>",
     ]
+
     # Botão Voltar
     if pasta != raiz:
         linhas_html.append(
@@ -80,9 +87,11 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
             'a[href="../index.html"]:hover { background:#0066cc; color:#fff; }'
             '</style>'
         )
+
     # Campo pesquisa
     linhas_html.append('<input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">')
     linhas_html.append("<pre id='listing'>")
+
     # Listagem geral
     itens = []
     for item in sorted(pasta.iterdir(), key=lambda x: (not x.is_dir(), x.name.lower())):
@@ -96,6 +105,7 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
             continue
         linhas_html.append(linha_html)
         itens.append([remover_acentos(item.name), linha_html])
+
     linhas_html.extend([
         "</pre>",
         "<script>",
@@ -116,45 +126,49 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
         "</body>",
         "</html>",
     ])
+
     index.write_text("\n".join(linhas_html), encoding="utf-8")
     print(f"✔ index atualizado: {pasta}")
-        # Bloco externo Kodi (apenas One.repo-*.zip)
-        if pasta == raiz:
-            # Ler conteúdo atual do index, se existir
-            content_antigo = ""
+
+    # Bloco externo Kodi (apenas One.repo-*.zip)
+    if pasta == raiz:
+        content_antigo = ""
+        if index.exists():
+            content_antigo = index.read_text(encoding="utf-8")
+
+        if repos_recentes:  # só lista se houver One.repo-*.zip
+            kodi_block = [
+                "",
+                "<!-- REPOSITORIO KODI (FORA DO HTML) -->",
+                '<div id="Repositorio-KODI" style="display:none">',
+                "<table>",
+            ]
+            for repo in repos_recentes:
+                rel = repo.relative_to(raiz).as_posix()
+                kodi_block.append(f'<tr><td><a href="{rel}">{rel}</a></td></tr>')
+            kodi_block.extend([
+                "</table>",
+                "</div>"
+            ])
+
+            # Remove bloco antigo antes de adicionar o novo
+            content_antigo = re.sub(
+                r'<!-- REPOSITORIO KODI \(FORA DO HTML\) -->.*?</div>',
+                '', content_antigo, flags=re.DOTALL
+            )
+
+            with index.open("w", encoding="utf-8") as f:
+                f.write("\n".join(linhas_html) + "\n" + content_antigo + "\n" + "\n".join(kodi_block))
+            print(f"✔ bloco externo Kodi adicionado/atualizado: {index}")
+        else:
+            # Remove bloco antigo se não houver One.repo-*.zip
             if index.exists():
-                content_antigo = index.read_text(encoding="utf-8")
-            if repos_recentes:  # só lista se houver One.repo-*.zip
-                kodi_block = [
-                    "",
-                    "<!-- REPOSITORIO KODI (FORA DO HTML) -->",
-                    '<div id="Repositorio-KODI" style="display:none">',
-                    "<table>",
-                ]
-                for repo in repos_recentes:
-                    rel = repo.relative_to(raiz).as_posix()
-                    kodi_block.append(f'<tr><td><a href="{rel}">{rel}</a></td></tr>')
-                kodi_block.extend([
-                    "</table>",
-                    "</div>"
-                ])
-                # Remove bloco antigo antes de adicionar o novo
-                content_antigo = re.sub(
+                content_limpo = re.sub(
                     r'<!-- REPOSITORIO KODI \(FORA DO HTML\) -->.*?</div>',
                     '', content_antigo, flags=re.DOTALL
                 )
-                with index.open("w", encoding="utf-8") as f:
-                    f.write("\n".join(linhas_html) + "\n" + content_antigo + "\n" + "\n".join(kodi_block))
-                print(f"✔ bloco externo Kodi adicionado/atualizado: {index}")
-            else:
-                # Remove bloco antigo se não houver One.repo-*.zip
-                if index.exists():
-                    content_limpo = re.sub(
-                        r'<!-- REPOSITORIO KODI \(FORA DO HTML\) -->.*?</div>',
-                        '', content_antigo, flags=re.DOTALL
-                    )
-                    index.write_text("\n".join(linhas_html) + "\n" + content_limpo, encoding="utf-8")
-                    print(f"🧹 bloco externo Kodi removido: {index}")
+                index.write_text("\n".join(linhas_html) + "\n" + content_limpo, encoding="utf-8")
+                print(f"🧹 bloco externo Kodi removido: {index}")
 
 # Varredura bottom-up
 def varrer_bottom_up(pasta: Path, raiz: Path):
