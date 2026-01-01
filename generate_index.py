@@ -50,13 +50,11 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
             print(f"🧹 removido: {index}")
         return
 
-    repos_recentes = encontrar_repos_mais_recentes(raiz)
-
-    if pasta == raiz and not repos_recentes:
-        if index.exists():
-            index.unlink()
-            print(f"🧹 removido: {index}")
-        return
+if pasta == raiz and not pasta_tem_zip_recursivo(raiz):
+    if index.exists():
+        index.unlink()
+        print(f"🧹 removido: {index}")
+    return
 
     linhas_html = [
         "<!DOCTYPE html>",
