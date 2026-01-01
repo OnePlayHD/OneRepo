@@ -44,20 +44,27 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
     index = pasta / "index.html"
     tem_zip = pasta_tem_zip_recursivo(pasta)
 
+    # Se não é raiz e não tem zip → remove index
     if pasta != raiz and not tem_zip:
         if index.exists():
             index.unlink()
             print(f"🧹 removido: {index}")
         return
 
+    # Verifica qualquer zip geral na raiz para decidir manter index na raiz
     tem_zip_geral = pasta_tem_zip_recursivo(raiz)
-
     if pasta == raiz and not tem_zip_geral:
         if index.exists():
             index.unlink()
             print(f"🧹 removido: {index}")
         return
 
+    # Repositórios oficiais para o bloco Kodi (One.repo-*.zip)
+    repos_recentes = encontrar_repos_mais_recentes(raiz)
+
+    # =============================
+    # Gerar conteúdo HTML
+    # =============================
     linhas_html = [
         "<!DOCTYPE html>",
         "<html lang='pt-BR'>",
@@ -81,9 +88,7 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
         "<hr/>",
     ]
 
-    # =============================
-    # Botão Voltar (pill / clean)
-    # =============================
+    # Botão Voltar
     if pasta != raiz:
         linhas_html.append(
             '<a href="../index.html" style="display:inline-flex; align-items:center; gap:6px; '
@@ -96,18 +101,11 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
             '</style>'
         )
 
-    # =============================
-    # Campo de pesquisa (sem lupa)
-    # =============================
-    linhas_html.append(
-        '<input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">'
-    )
-
+    # Campo pesquisa
+    linhas_html.append('<input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">')
     linhas_html.append("<pre id='listing'>")
 
-    # =============================
-    # Listagem
-    # =============================
+    # Listagem geral
     itens = []
     for item in sorted(pasta.iterdir(), key=lambda x: (not x.is_dir(), x.name.lower())):
         if item.name.startswith(".") or item.name == "index.html":
@@ -148,25 +146,26 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
     print(f"✔ index atualizado: {pasta}")
 
     # =============================
-    # Bloco externo Kodi
+    # Bloco externo Kodi (apenas One.repo-*.zip)
     # =============================
-    if pasta == raiz and tem_zip_geral:
-        kodi_block = [
-            "",
-            "<!-- REPOSITORIO KODI (FORA DO HTML) -->",
-            '<div id="Repositorio-KODI" style="display:none">',
-            "<table>",
-        ]
-        for repo in tem_zip_geral:
-            rel = repo.relative_to(raiz).as_posix()
-            kodi_block.append(f'<tr><td><a href="{rel}">{rel}</a></td></tr>')
-        kodi_block.extend([
-            "</table>",
-            "</div>"
-        ])
-        with index.open("a", encoding="utf-8") as f:
-            f.write("\n".join(kodi_block))
-        print(f"✔ bloco externo Kodi adicionado: {index}")
+    if pasta == raiz:
+        if repos_recentes:  # só lista se houver One.repo-*.zip
+            kodi_block = [
+                "",
+                "<!-- REPOSITORIO KODI (FORA DO HTML) -->",
+                '<div id="Repositorio-KODI" style="display:none">',
+                "<table>",
+            ]
+            for repo in repos_recentes:
+                rel = repo.relative_to(raiz).as_posix()
+                kodi_block.append(f'<tr><td><a href="{rel}">{rel}</a></td></tr>')
+            kodi_block.extend([
+                "</table>",
+                "</div>"
+            ])
+            with index.open("a", encoding="utf-8") as f:
+                f.write("\n".join(kodi_block))
+            print(f"✔ bloco externo Kodi adicionado: {index}")
 
 # =============================
 # Varredura bottom-up
