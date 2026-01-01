@@ -50,9 +50,9 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
             print(f"🧹 removido: {index}")
         return
 
-    repos_recentes = encontrar_repos_mais_recentes(raiz)
+    tem_zip_geral = pasta_tem_zip_recursivo(raiz)
 
-    if pasta == raiz and not repos_recentes:
+    if pasta == raiz and not tem_zip_geral:
         if index.exists():
             index.unlink()
             print(f"🧹 removido: {index}")
@@ -150,14 +150,14 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
     # =============================
     # Bloco externo Kodi
     # =============================
-    if pasta == raiz and repos_recentes:
+    if pasta == raiz and tem_zip_geral:
         kodi_block = [
             "",
             "<!-- REPOSITORIO KODI (FORA DO HTML) -->",
             '<div id="Repositorio-KODI" style="display:none">',
             "<table>",
         ]
-        for repo in repos_recentes:
+        for repo in tem_zip_geral:
             rel = repo.relative_to(raiz).as_posix()
             kodi_block.append(f'<tr><td><a href="{rel}">{rel}</a></td></tr>')
         kodi_block.extend([
