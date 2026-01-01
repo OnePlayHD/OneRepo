@@ -39,7 +39,7 @@ jobs:
 
           # evita commit vazio
           if ! git diff --cached --quiet; then
-            git commit -m "chore: Update... Automatic index.html (latest zip only)"
+            git commit -m "Update... Automatic index.html (latest zip only)"
             git push origin master
           else
             echo "✔ Nenhuma mudança gerada pelo script"
