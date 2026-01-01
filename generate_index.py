@@ -32,7 +32,7 @@ def encontrar_repos_mais_recentes(raiz: Path) -> list[Path]:
 def gerar_ou_remover_index(pasta: Path, raiz: Path):
     index = pasta / "index.html"
     tem_zip = pasta_tem_zip_recursivo(pasta)
-
+    
     # Se não é raiz e não tem zip → remove index
     if pasta != raiz and not tem_zip:
         if index.exists():
@@ -127,16 +127,19 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
         "</html>",
     ])
 
+    # Escreve o index principal
     index.write_text("\n".join(linhas_html), encoding="utf-8")
     print(f"✔ index atualizado: {pasta}")
 
     # Bloco externo Kodi (apenas One.repo-*.zip)
     if pasta == raiz:
-        content_antigo = ""
-        if index.exists():
-            content_antigo = index.read_text(encoding="utf-8")
-
-        if repos_recentes:  # só lista se houver One.repo-*.zip
+        content_atual = index.read_text(encoding="utf-8")
+        # Remove bloco antigo do Kodi se existir
+        content_limpo = re.sub(
+            r'<!-- REPOSITORIO KODI \(FORA DO HTML\) -->.*?</div>',
+            '', content_atual, flags=re.DOTALL
+        )
+        if repos_recentes:
             kodi_block = [
                 "",
                 "<!-- REPOSITORIO KODI (FORA DO HTML) -->",
@@ -150,25 +153,12 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
                 "</table>",
                 "</div>"
             ])
-
-            # Remove bloco antigo antes de adicionar o novo
-            content_antigo = re.sub(
-                r'<!-- REPOSITORIO KODI \(FORA DO HTML\) -->.*?</div>',
-                '', content_antigo, flags=re.DOTALL
-            )
-
-            with index.open("w", encoding="utf-8") as f:
-                f.write("\n".join(linhas_html) + "\n" + content_antigo + "\n" + "\n".join(kodi_block))
+            index.write_text(content_limpo + "\n" + "\n".join(kodi_block), encoding="utf-8")
             print(f"✔ bloco externo Kodi adicionado/atualizado: {index}")
         else:
-            # Remove bloco antigo se não houver One.repo-*.zip
-            if index.exists():
-                content_limpo = re.sub(
-                    r'<!-- REPOSITORIO KODI \(FORA DO HTML\) -->.*?</div>',
-                    '', content_antigo, flags=re.DOTALL
-                )
-                index.write_text("\n".join(linhas_html) + "\n" + content_limpo, encoding="utf-8")
-                print(f"🧹 bloco externo Kodi removido: {index}")
+            # Se não houver One.repo-*.zip → apenas escreve o HTML limpo
+            index.write_text(content_limpo, encoding="utf-8")
+            print(f"🧹 bloco externo Kodi removido: {index}")
 
 # Varredura bottom-up
 def varrer_bottom_up(pasta: Path, raiz: Path):
