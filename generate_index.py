@@ -23,6 +23,7 @@ def encontrar_repos_mais_recentes(raiz: Path) -> list[Path]:
             encontrados.append((versao, item))
     if not encontrados:
         return []
+
     maior = max(v for v, _ in encontrados)
     return [p for v, p in encontrados if v == maior]
 
@@ -30,13 +31,13 @@ def encontrar_repos_mais_recentes(raiz: Path) -> list[Path]:
 def gerar_ou_remover_index(pasta: Path, raiz: Path):
     index = pasta / "index.html"
     tem_zip = pasta_tem_zip_recursivo(pasta)
-    # Se não é raiz e não tem zip → remove index
+    # Remove index se não for raiz e não tiver zip
     if pasta != raiz and not tem_zip:
         if index.exists():
             index.unlink()
             print(f"🧹 removido: {index}")
         return
-    # Verifica qualquer zip geral na raiz para decidir manter index na raiz
+    # Remove index na raiz se não houver nenhum zip geral
     tem_zip_geral = pasta_tem_zip_recursivo(raiz)
     if pasta == raiz and not tem_zip_geral:
         if index.exists():
@@ -118,6 +119,7 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
     ])
     index.write_text("\n".join(linhas_html), encoding="utf-8")
     print(f"✔ index atualizado: {pasta}")
+
         # Bloco externo Kodi (apenas One.repo-*.zip)
         if pasta == raiz:
         if repos_recentes:  # só lista se houver One.repo-*.zip
@@ -136,7 +138,14 @@ def gerar_ou_remover_index(pasta: Path, raiz: Path):
             ])
             with index.open("a", encoding="utf-8") as f:
                 f.write("\n".join(kodi_block))
-            print(f"✔ bloco externo Kodi adicionado: {index}")
+            print(f"✔ bloco externo Kodi adicionado/atualizado: {index}")
+        else:
+            # Remove bloco Kodi se não houver One.repo-*.zip
+            if index.exists():
+                content = index.read_text(encoding="utf-8")
+                content = re.sub(r'<!-- REPOSITORIO KODI \(FORA DO HTML\) -->.*?</div>', '', content, flags=re.DOTALL)
+                index.write_text(content, encoding="utf-8")
+                print(f"🧹 bloco externo Kodi removido: {index}")
 
 # Varredura bottom-up
 def varrer_bottom_up(pasta: Path, raiz: Path):
