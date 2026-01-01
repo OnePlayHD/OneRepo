@@ -1,46 +1,41 @@
+name: Atualizar Index HTML
+
+# Dispara sempre que houver push na branch main ou manualmente
 on:
   push:
-    branches:
-      - master
-  workflow_dispatch:
-
-concurrency:
-  group: auto-generate-index
-  cancel-in-progress: true
+    branches: [main]
+  workflow_dispatch:  # permite rodar manualmente no GitHub
 
 jobs:
-  generate-index:
+  atualizar-index:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+    # 1️⃣ Pega o código do repositório
+    - name: Checkout do repositório
+      uses: actions/checkout@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
+    # 2️⃣ Configura Python
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"  # pode mudar para sua versão preferida
 
-      - name: Generate smart index
-        run: python generate_index.py
+    # 3️⃣ Instala dependências se houver (opcional)
+    - name: Atualizar pip
+      run: |
+        pip install --upgrade pip
 
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+    # 4️⃣ Roda o script generate_index.py
+    - name: Gerar/Atualizar index.html
+      run: |
+        python generate_index.py
 
-          # garante branch atualizada
-          git pull --rebase origin master
-
-          # adiciona criações, alterações e remoções
-          git add -A
-
-          # evita commit vazio
-          if ! git diff --cached --quiet; then
-            git commit -m "Update... Automatic index.html (latest zip only)"
-            git push origin master
-          else
-            echo "✔ Nenhuma mudança gerada pelo script"
-          fi
+    # 5️⃣ Commit e push automático das alterações
+    - name: Commit & Push alterações
+      run: |
+        git config --local user.name "GitHub Actions"
+        git config --local user.email "actions@github.com"
+        git add .
+        git diff --quiet || git commit -m "Atualizar index.html via workflow"
+        git push
