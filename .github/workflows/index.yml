@@ -23,6 +23,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Wait 6 seconds
+        run: sleep 6
+
       - name: Generate smart index
         run: python generate_index.py
 
