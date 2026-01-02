@@ -1,3 +1,5 @@
+colocar um delay nesse workflows de 6 segundos
+
 name: Auto Generate Index
 
 on:
@@ -22,9 +24,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-
-      - name: Wait 6 seconds
-        run: sleep 6
 
       - name: Generate smart index
         run: python generate_index.py
