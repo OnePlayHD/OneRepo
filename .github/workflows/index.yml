@@ -1,5 +1,3 @@
-colocar um delay nesse workflows de 6 segundos
-
 name: Auto Generate Index
 
 on:
