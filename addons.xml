@@ -35,13 +35,14 @@
     </extension>
     <version>1.15</version>
   </addon>
-  <addon id="plugin.video.OnePlay.Matrix" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.1.7" provider-name="Equipe OnePlay">
+  <addon id="plugin.video.OnePlay.Matrix" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.1.8" provider-name="Equipe OnePlay">
     <requires>
       <import addon="script.module.simplejson"/>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
       <import addon="script.module.beautifulsoup4"/>
       <import addon="script.module.requests"/>
+      <import addon="script.module.inputstreamhelper" optional="true"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
       <provides>video</provides>
@@ -56,6 +57,6 @@
         <fanart>fanart.jpg</fanart>
       </assets>
     </extension>
-    <version>3.1.7</version>
+    <version>3.1.8</version>
   </addon>
 </addons>
