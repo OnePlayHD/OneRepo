@@ -57,7 +57,7 @@
     </extension>
     <version>0.0.2</version>
   </addon>
-  <addon id="plugin.video.OnePlay.Matrix" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.1.9" provider-name="Equipe OnePlay">
+  <addon id="plugin.video.OnePlay.Matrix" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.2.0" provider-name="Equipe OnePlay">
     <requires>
       <import addon="script.module.simplejson"/>
       <import addon="script.module.six"/>
@@ -78,7 +78,7 @@
         <fanart>fanart.jpg</fanart>
       </assets>
     </extension>
-    <version>3.1.9</version>
+    <version>3.2.0</version>
   </addon>
   <addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.9">
     <extension point="xbmc.addon.repository" name="SlyGuy Repository">
