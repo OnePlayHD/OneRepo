@@ -35,7 +35,7 @@
     </extension>
     <version>1.15</version>
   </addon>
-  <addon id="hunter.fm" name="[B]Hunter.FM[/B]" version="0.0.2" provider-name="Equipe OnePlay">
+  <addon id="hunter.fm" name="[B]Hunter.FM[/B]" version="0.0.1" provider-name="Equipe OnePlay">
     <requires>
       <import addon="script.module.simplejson"/>
       <import addon="script.module.kodi-six"/>
@@ -55,6 +55,5 @@
         <fanart>fanart.png</fanart>
       </assets>
     </extension>
-    <version>0.0.2</version>
   </addon>
 </addons>
