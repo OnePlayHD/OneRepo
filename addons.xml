@@ -35,7 +35,7 @@
     </extension>
     <version>1.15</version>
   </addon>
-  <addon id="plugin.video.OnePlay.Matrix" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.2.0" provider-name="Equipe OnePlay">
+  <addon id="plugin.video.OnePlay.Matrix" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.2.1" provider-name="Equipe OnePlay">
     <requires>
       <import addon="script.module.simplejson"/>
       <import addon="script.module.six"/>
@@ -56,6 +56,6 @@
         <fanart>fanart.jpg</fanart>
       </assets>
     </extension>
-    <version>3.2.0</version>
+    <version>3.2.1</version>
   </addon>
 </addons>
