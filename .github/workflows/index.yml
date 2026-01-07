@@ -34,7 +34,7 @@ jobs:
           # adiciona CRIAÇÕES, MODIFICAÇÕES E REMOÇÕES
           git add -A
 
-          git commit -m "index.html atualização... (ZIP Online)" || echo "No changes"
+          git commit -m "index.html atualizado... (ZIP Online)" || echo "No changes"
 
           git pull --rebase origin master
           git push origin master
