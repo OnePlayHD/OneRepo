@@ -55,4 +55,27 @@
       </assets>
     </extension>
   </addon>
+  <addon id="plugin.video.animesplay" version="1.0.5" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]" provider-name="OnePlay Team">
+    <requires>
+      <import addon="script.module.simplejson"/>
+      <import addon="script.module.six"/>
+      <import addon="script.module.kodi-six"/>
+      <import addon="script.module.beautifulsoup4"/>
+      <import addon="script.module.fasthttp"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>Animes play é um addon que reproduz animes, podendo salvar nos favoritos</summary>
+      <description>Todos os videos são de sites terceiros, não hospedamos conteudo</description>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+      <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
 </addons>
