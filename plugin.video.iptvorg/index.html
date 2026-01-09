@@ -18,17 +18,13 @@ a:hover { text-decoration:underline; }
 <body>
 <h1>Directory listing</h1>
 <hr/>
+<a class="voltar" href="../index.html">← Voltar</a>
 <input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">
 <pre id='listing'>
-📁 <a href="./One.repo/index.html">One.repo/</a>
-📁 <a href="./plugin.video.iptvorg/index.html">plugin.video.iptvorg/</a>
-📁 <a href="./plugin.video.iptvpremium.matrix/index.html">plugin.video.iptvpremium.matrix/</a>
-📁 <a href="./plugin.video.iptvxc/index.html">plugin.video.iptvxc/</a>
-📁 <a href="./plugin.video.kingiptv/index.html">plugin.video.kingiptv/</a>
-📁 <a href="./plugin.video.OnePlay.Matrix/index.html">plugin.video.OnePlay.Matrix/</a>
+📦 <a href="./plugin.video.iptvorg-0.0.1.zip">plugin.video.iptvorg-0.0.1.zip</a>
 </pre>
 <script>
-const items = [['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>'], ['plugin.video.iptvorg', '📁 <a href="./plugin.video.iptvorg/index.html">plugin.video.iptvorg/</a>'], ['plugin.video.iptvpremium.matrix', '📁 <a href="./plugin.video.iptvpremium.matrix/index.html">plugin.video.iptvpremium.matrix/</a>'], ['plugin.video.iptvxc', '📁 <a href="./plugin.video.iptvxc/index.html">plugin.video.iptvxc/</a>'], ['plugin.video.kingiptv', '📁 <a href="./plugin.video.kingiptv/index.html">plugin.video.kingiptv/</a>'], ['plugin.video.oneplay.matrix', '📁 <a href="./plugin.video.OnePlay.Matrix/index.html">plugin.video.OnePlay.Matrix/</a>']];
+const items = [['plugin.video.iptvorg-0.0.1.zip', '📦 <a href="./plugin.video.iptvorg-0.0.1.zip">plugin.video.iptvorg-0.0.1.zip</a>']];
 const input = document.getElementById('search');
 const listing = document.getElementById('listing');
 input.addEventListener('input', () => {
@@ -38,10 +34,3 @@ input.addEventListener('input', () => {
 </script>
 </body>
 </html>
-
-<!-- REPOSITORIO KODI (FORA DO HTML) -->
-<div id="Repositorio-KODI" style="display:none">
-<table>
-<tr><td><a href="One.repo/One.repo-1.15.zip">One.repo/One.repo-1.15.zip</a></td></tr>
-</table>
-</div>
