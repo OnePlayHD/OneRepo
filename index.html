@@ -20,12 +20,11 @@ a:hover { text-decoration:underline; }
 <hr/>
 <input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">
 <pre id='listing'>
-📁 <a href="./hunter.fm/index.html">hunter.fm/</a>
 📁 <a href="./One.repo/index.html">One.repo/</a>
 📁 <a href="./plugin.audio.4sharedMP3/index.html">plugin.audio.4sharedMP3/</a>
 </pre>
 <script>
-const items = [['hunter.fm', '📁 <a href="./hunter.fm/index.html">hunter.fm/</a>'], ['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>'], ['plugin.audio.4sharedmp3', '📁 <a href="./plugin.audio.4sharedMP3/index.html">plugin.audio.4sharedMP3/</a>']];
+const items = [['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>'], ['plugin.audio.4sharedmp3', '📁 <a href="./plugin.audio.4sharedMP3/index.html">plugin.audio.4sharedMP3/</a>']];
 const input = document.getElementById('search');
 const listing = document.getElementById('listing');
 input.addEventListener('input', () => {
