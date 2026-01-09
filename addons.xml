@@ -112,6 +112,24 @@ v1.0.0
       </assets>
     </extension>
   </addon>
+  <addon id="plugin.video.iptvxc" name="[B][COLOR blue]XCUI Streams[/B][/COLOR]" version="3.1.8" provider-name="[B][COLOR orange]Fire TV[/B][/COLOR]">
+    <requires>
+      <import addon="script.module.requests" version="2.27.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">[COLOR blue]An IPTV addon written to work with XC and XCUI for Kodi 19+[/COLOR] </summary>
+      <language>en</language>
+      <description lang="en">[COLOR blue]This addon does not supply nor provide any illegal content[/COLOR]</description>
+      <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
   <addon id="plugin.video.kingiptv" version="0.0.1" name="KING IPTV" provider-name="Joel">
     <requires>
       <import addon="script.module.simplejson"/>
