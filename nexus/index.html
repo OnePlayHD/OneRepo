@@ -18,14 +18,13 @@ a:hover { text-decoration:underline; }
 <body>
 <h1>Directory listing</h1>
 <hr/>
+<a class="voltar" href="../index.html">← Voltar</a>
 <input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">
 <pre id='listing'>
-📁 <a href="./matrix/index.html">matrix/</a>
-📁 <a href="./nexus/index.html">nexus/</a>
-📁 <a href="./One.repo/index.html">One.repo/</a>
+📁 <a href="./plugin.audio.4sharedMP3/index.html">plugin.audio.4sharedMP3/</a>
 </pre>
 <script>
-const items = [['matrix', '📁 <a href="./matrix/index.html">matrix/</a>'], ['nexus', '📁 <a href="./nexus/index.html">nexus/</a>'], ['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>']];
+const items = [['plugin.audio.4sharedmp3', '📁 <a href="./plugin.audio.4sharedMP3/index.html">plugin.audio.4sharedMP3/</a>']];
 const input = document.getElementById('search');
 const listing = document.getElementById('listing');
 input.addEventListener('input', () => {
@@ -35,10 +34,3 @@ input.addEventListener('input', () => {
 </script>
 </body>
 </html>
-
-<!-- REPOSITORIO KODI (FORA DO HTML) -->
-<div id="Repositorio-KODI" style="display:none">
-<table>
-<tr><td><a href="One.repo/One.repo-1.15.zip">One.repo/One.repo-1.15.zip</a></td></tr>
-</table>
-</div>
