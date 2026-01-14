@@ -43,23 +43,6 @@
       </assets>
     </extension>
   </addon>
-  <addon id="script.module.idna" name="idna" version="3.10.0" provider-name="Kim Davies">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib"/>
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en_GB">Internationalized Domain Names for Python</summary>
-      <description lang="en_GB">Internationalized Domain Names for Python</description>
-      <license>BSD-3-Clause</license>
-      <platform>all</platform>
-      <website>https://github.com/kjd/idna</website>
-      <source>https://github.com/kjd/idna</source>
-      <assets>
-        <icon>resources/icon.png</icon>
-      </assets>
-    </extension>
-  </addon>
   <addon id="script.module.kodi-six" name="Kodi Six" version="0.1.3.1" provider-name="Roman V.M.">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
