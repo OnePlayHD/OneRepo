@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+  <addon id="script.limpeza.Matrix" name="[COLORred]Script[/COLOR] [COLORgreen]Limpeza[/COLOR]" provider-name="BOSS" version="1.0.1">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup">
+      <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <summary lang="en_GB">Clean up temporary files in Kodi.</summary>
+      <summary lang="pt_BR">Limpeza de arquivos temporários no Kodi.</summary>
+      <summary lang="es_ES">Limpieza de archivos temporales en Kodi.</summary>
+      <description lang="en_GB">Safely cleans temporary files (cache, temp, packages, and thumbnails) in Kodi versions 19 through 21.3, helping improve performance and free up storage space.</description>
+      <description lang="pt_BR">Remove com segurança arquivos temporários do Kodi (cache, pasta temp, pacotes e miniaturas), ajudando a melhorar o desempenho e liberar espaço. Compatível com Kodi 19 até 21.3.</description>
+      <description lang="es_ES">Limpia de forma segura los archivos temporales de Kodi (caché, temp, paquetes y miniaturas), mejorando el rendimiento y liberando espacio. Compatible con Kodi 19 hasta 21.3.</description>
+      <license>GNU GENERAL PUBLIC LICENSE</license>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
   <addon id="script.module.beautifulsoup4" name="beautifulsoup4" version="4.12.2" provider-name="Leonard Richardson">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
@@ -13,6 +38,22 @@
       <platform>all</platform>
       <website>https://www.crummy.com/software/BeautifulSoup/</website>
       <source>https://code.launchpad.net/beautifulsoup</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.certifi" name="certifi" version="2023.5.7" provider-name="Certifi">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Certifi: Python SSL Certificates</summary>
+      <description lang="en_GB">Certifi is a carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. It has been extracted from the Requests project.</description>
+      <license>MPL-2.0</license>
+      <website>https://github.com/certifi/python-certifi</website>
+      <source>https://github.com/certifi/python-certifi</source>
       <assets>
         <icon>resources/icon.png</icon>
       </assets>
@@ -35,20 +76,42 @@
       </assets>
     </extension>
   </addon>
-  <addon id="script.module.idna" name="idna" version="3.10.0" provider-name="Kim Davies">
+  <addon id="script.module.kodi-helper" name="KODI HELPER" version="0.0.4" provider-name="zoreu">
     <requires>
-      <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.simplejson"/>
+      <import addon="script.module.six"/>
+      <import addon="script.module.kodi-six"/>
+      <import addon="script.module.requests"/>
+      <import addon="script.module.beautifulsoup4"/>
     </requires>
     <extension point="xbmc.python.module" library="lib"/>
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en_GB">Internationalized Domain Names for Python</summary>
-      <description lang="en_GB">Internationalized Domain Names for Python</description>
-      <license>BSD-3-Clause</license>
-      <platform>all</platform>
-      <website>https://github.com/kjd/idna</website>
-      <source>https://github.com/kjd/idna</source>
+    <extension point="kodi.context.item">
+      <menu id="kodi.core.main">
+        <menu>
+          <label>KODI HELPER MENU</label>
+          <item library="context_proxy.py">
+            <label>PLAY IPTV WITH PROXY</label>
+            <visible>String.Contains(ListItem.path,plugin)</visible>
+          </item>
+          <item library="context_info.py">
+            <label>IPTV INFO</label>
+            <visible>String.Contains(ListItem.path,plugin)</visible>
+          </item>
+          <item library="context_torrent.py">
+            <label>PLAY TORRENT</label>
+            <visible>String.Contains(ListItem.path,plugin)</visible>
+          </item>
+        </menu>
+      </menu>
+    </extension>
+    <extension point="kodi.addon.metadata">
+      <summary lang="en">Kodi helper module for addons</summary>
+      <disclaimer lang="en">The author is not responsible for addon usage and does not host or distribute any of the content displayed by this addon.</disclaimer>
+      <license>WTFPL, Version 2, December 2004. See included LICENSE.</license>
+      <source>https://github.com/zoreu/script.module.kodi-helper</source>
+      <forum/>
       <assets>
-        <icon>resources/icon.png</icon>
+        <icon>icon.png</icon>
       </assets>
     </extension>
   </addon>
