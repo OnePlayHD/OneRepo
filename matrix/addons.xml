@@ -200,6 +200,40 @@
       </assets>
     </extension>
   </addon>
+  <addon id="script.module.simplejson" name="simplejson" version="3.19.1+matrix.1" provider-name="Bob Ippolito">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Simple, fast, extensible JSON encoder/decoder for Python</summary>
+      <description lang="en_GB">Simple, fast, extensible JSON encoder/decoder for Python</description>
+      <license>MIT</license>
+      <platform>all</platform>
+      <website>https://github.com/simplejson/simplejson</website>
+      <source>https://github.com/simplejson/simplejson</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.six" name="six" version="1.16.0+matrix.1" provider-name="Benjamin Peterson">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Python 2 and 3 compatibility utilities</summary>
+      <description lang="en_GB">Python 2 and 3 compatibility utilities</description>
+      <license>MIT</license>
+      <platform>all</platform>
+      <website>https://github.com/benjaminp/six</website>
+      <source>https://github.com/benjaminp/six</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
   <addon id="script.module.soupsieve" name="soupsieve" version="2.4.1" provider-name="Isaac Muse">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
@@ -231,6 +265,30 @@
       <source>https://github.com/urllib3/urllib3</source>
       <assets>
         <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.oneplayvip.downloader" name="ONEPLAY VIP DOWNLOADER" version="1.0.4" provider-name="Oneplay team">
+    <requires>
+      <import addon="script.module.six"/>
+      <import addon="script.module.kodi-six"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Oneplay vip downloader, download apk s from oneplay</summary>
+      <summary lang="pt">Oneplay vip downloader, baixe apk s do oneplay</summary>
+      <description lang="en">Oneplay vip is a paid iptv service</description>
+      <description lang="pt">Oneplay vip é um serviço pago de iptv</description>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 1, 12 June 2022</license>
+      <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+      <disclaimer lang="pt">O autor deste complemento não hospeda nenhum dos conteúdos encontrados e não possui qualquer afiliação com nenhum dos provedores de conteúdo. Este complemento apenas pesquisa conteúdo em sites. Use por sua conta e risco!</disclaimer>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+        <screenshot>resources/images/screenshot-1.jpg</screenshot>
+        <screenshot>resources/images/screenshot-1.jpg</screenshot>
+        <screenshot>resources/images/screenshot-1.jpg</screenshot>
       </assets>
     </extension>
   </addon>
