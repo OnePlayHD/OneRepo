@@ -18,14 +18,18 @@ a:hover { text-decoration:underline; }
 <body>
 <h1>Directory listing</h1>
 <hr/>
+<a class="voltar" href="../index.html">← Voltar</a>
 <input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">
 <pre id='listing'>
-📁 <a href="./leia/index.html">leia/</a>
-📁 <a href="./matrix/index.html">matrix/</a>
-📁 <a href="./One.repo/index.html">One.repo/</a>
+📁 <a href="./script.limpeza.Matrix/index.html">script.limpeza.Matrix/</a>
+📁 <a href="./script.module.beautifulsoup4/index.html">script.module.beautifulsoup4/</a>
+📁 <a href="./script.module.certifi/index.html">script.module.certifi/</a>
+📁 <a href="./script.module.chardet/index.html">script.module.chardet/</a>
+📁 <a href="./script.module.idna/index.html">script.module.idna/</a>
+📁 <a href="./script.module.kodi-helper/index.html">script.module.kodi-helper/</a>
 </pre>
 <script>
-const items = [['leia', '📁 <a href="./leia/index.html">leia/</a>'], ['matrix', '📁 <a href="./matrix/index.html">matrix/</a>'], ['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>']];
+const items = [['script.limpeza.matrix', '📁 <a href="./script.limpeza.Matrix/index.html">script.limpeza.Matrix/</a>'], ['script.module.beautifulsoup4', '📁 <a href="./script.module.beautifulsoup4/index.html">script.module.beautifulsoup4/</a>'], ['script.module.certifi', '📁 <a href="./script.module.certifi/index.html">script.module.certifi/</a>'], ['script.module.chardet', '📁 <a href="./script.module.chardet/index.html">script.module.chardet/</a>'], ['script.module.idna', '📁 <a href="./script.module.idna/index.html">script.module.idna/</a>'], ['script.module.kodi-helper', '📁 <a href="./script.module.kodi-helper/index.html">script.module.kodi-helper/</a>']];
 const input = document.getElementById('search');
 const listing = document.getElementById('listing');
 input.addEventListener('input', () => {
@@ -35,10 +39,3 @@ input.addEventListener('input', () => {
 </script>
 </body>
 </html>
-
-<!-- REPOSITORIO KODI (FORA DO HTML) -->
-<div id="Repositorio-KODI" style="display:none">
-<table>
-<tr><td><a href="One.repo/One.repo-1.16.zip">One.repo/One.repo-1.16.zip</a></td></tr>
-</table>
-</div>
