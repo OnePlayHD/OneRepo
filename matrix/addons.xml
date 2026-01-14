@@ -1,2 +1,305 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addons/>
+<addons>
+  <addon id="plugin.video.OnePlay.Matrix" name="[COLOR aquamarine][B]ONE[/COLOR][COLOR white]PLAY[/B][/COLOR]" version="3.2.8" provider-name="Equipe OnePlay">
+    <requires>
+      <import addon="script.module.simplejson"/>
+      <import addon="script.module.six"/>
+      <import addon="script.module.kodi-six"/>
+      <import addon="script.module.beautifulsoup4"/>
+      <import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>OnePlay é um plugin que exibe conteudos free</summary>
+      <description>Todos os videos são de sites terceiros, não hospedamos conteudo</description>
+      <platform>all</platform>
+      <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="plugin.video.onevip" name="ONEPLAY VIP BETA" version="1.0.3" provider-name="Joel">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>Addon para Xtream Codes com TV, Filmes, Series, EPG e Busca Global</summary>
+      <description>Insira usuario e senha para acessar canais, VOD, series com temporadas/episodios, EPG e busca global.</description>
+      <platform>all</platform>
+      <license>GPL-2.0-or-later</license>
+      <disclaimer>OnePlay VIP, um addon para Kodi que permite acesso a conteudo de IPTV.</disclaimer>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="plugin.video.thethunder" version="1.2.9" name="[COLOR violet]THUNDER[/COLOR]" provider-name="OnePlay Team">
+    <requires>
+      <import addon="script.module.requests"/>
+      <import addon="script.module.resolveurl"/>
+      <import addon="script.module.kodi-helper"/>
+      <import addon="service.subtitles.legendei"/>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="thethunder.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Thunder e um addon da equipe oneplay que busca conteudo na internet</summary>
+      <summary lang="pt">Thunder e um addon da equipe oneplay que busca conteudo na internet</summary>
+      <description lang="en">Thunder nao hospeda conteudo, todos os videos sao pesquisados na internet de forma automatizada</description>
+      <description lang="en">Thunder nao hospeda conteudo, todos os videos sao pesquisados na internet de forma automatizada</description>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+      <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="repository.BrazucaPlay" name="[B][COLOR white]Brazuca Play [COLOR blue]Repo[/COLOR][/COLOR][/B]" version="1.5" provider-name="Brazuca Play">
+    <requires>
+      <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="Brazuca Play Repository">
+      <dir minversion="16.0.0" maxversion="18.9.0">
+        <info compressed="false">https://raw.githubusercontent.com/skyrisk/brazucaplay/master/addons/repo/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/skyrisk/brazucaplay/master/addons/repo/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/skyrisk/brazucaplay/master/addons/repo/Plugins/</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="18.9.1">
+        <info compressed="false">https://raw.githubusercontent.com/skyrisk/brazucaplay/master/addons/repo/addons_matrix.xml</info>
+        <checksum>https://raw.githubusercontent.com/skyrisk/brazucaplay/master/addons/repo/addons_matrix.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/skyrisk/brazucaplay/master/addons/repo/Plugins/</datadir>
+        <hashes>false</hashes>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="pt_br"/>
+      <description lang="pt_br"/>
+      <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+        <screenshot>resources/home.jpg</screenshot>
+        <screenshot>resources/movies.jpg</screenshot>
+        <screenshot>resources/series.jpg</screenshot>
+      </assets>
+      <news>
+[COLOR blue]●[/COLOR] v1.5 - ADD RESOLVEURL.
+[COLOR blue]●[/COLOR] v1.4 - KODI 19 MATRIX.
+[COLOR blue]●[/COLOR] v1.3 - CORREÇÕES DE BUGS.
+[COLOR blue]●[/COLOR] v1.2 - UPDATES CORRIGIDOS.
+[COLOR blue]●[/COLOR] v1.1 - PEQUENAS CORREÇÕES.
+[COLOR blue]●[/COLOR] v1.0 - VERSÃO INICIAL.
+</news>
+      <summary>Repositório Brazuca Play</summary>
+      <description>
+[B][COLOR blue]●[/COLOR] [COLOR white]Repositório oficial do Brazuca Play - 2025[/COLOR][/B]
+[B][COLOR firebrick]●[/COLOR] [COLOR white]Proibido a venda dos add-ons do Brazuca Play.[/COLOR][/B]
+[B][COLOR firebrick]●[/COLOR] [COLOR white]Não vendemos IPTV, caso ache sites ou mesmo apps é falso.[/COLOR][/B]
+</description>
+      <disclaimer>[B][COLOR white]Brazuca Play é apenas um AGREGADOR de links e, assim como o Google.com, apenas agrega e organiza os links externos. Não somos responsáveis pelos arquivos aqui encontrados.[/COLOR][/B]</disclaimer>
+    </extension>
+  </addon>
+  <addon id="repository.aresrepo" name="[COLOR lime]ares[/COLOR][COLOR yellow]repo[/COLOR] [COLORcyan]Repository[/COLOR]" version="1.15" provider-name="[COLOR lime]AR[/COLOR][COLOR yellow]ES[/COLOR]">
+    <requires>
+      <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="[COLOR red]aresrepo [COLOR cyan]Repositorio[/COLOR]">
+      <dir>
+        <info compressed="true">https://raw.github.com/aresrepo/aresrepo.github.io/master/addons.xml</info>
+        <checksum>https://raw.github.com/aresrepo/aresrepo.github.io/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/aresrepo/aresrepo.github.io/master</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="20.0.0">
+        <info compressed="true">https://raw.github.com/aresrepo/aresrepo.github.io/master/omega/addons.xml</info>
+        <checksum>https://raw.github.com/aresrepo/aresrepo.github.io/master/omega/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/aresrepo/aresrepo.github.io/master/omega</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="19.9.9">
+        <info compressed="true">https://raw.github.com/aresrepo/aresrepo.github.io/master/nexus/addons.xml</info>
+        <checksum>https://raw.github.com/aresrepo/aresrepo.github.io/master/nexus/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/aresrepo/aresrepo.github.io/master/nexus</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="19.0.0">
+        <info compressed="true">https://raw.github.com/aresrepo/aresrepo.github.io/master/matrix/addons.xml</info>
+        <checksum>https://raw.github.com/aresrepo/aresrepo.github.io/master/matrix/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/aresrepo/aresrepo.github.io/master/matrix</datadir>
+        <hashes>false</hashes>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>repositorio repoblacksheep</summary>
+      <description>[B][COLOR orange]ESTE É O REPOSITÓRIO OFICIAL DO ADDON [B][COLOR red]repo[/B][/COLOR][B][COLOR orange]ares[/B][/COLOR], [B]DESENVOLVIDO PARA OFERECER CONTEÚDOS EXCLUSIVOS COM QUALIDADE E PRATICIDADE. A REPRODUÇÃO OU DISTRIBUIÇÃO DESTE ADDON SEM AUTORIZAÇÃO PRÉVIA É ESTRITAMENTE PROIBIDA. APROVEITE UMA EXPERIÊNCIA PERSONALIZADA E OTIMIZADA PARA O SEU ENTRETENIMENTO.[/B][/COLOR]
+</description>
+      <disclaimer/>
+      <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="repository.dregs" name="[COLOR red]Dr[/COLOR]e[COLOR black]Gs[/COLOR] [COLORcyan]Repository[/COLOR]" version="2.36" provider-name="[COLORchocolate]@by_black[COLORgold]_eagle[/COLOR]">
+    <requires>
+      <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="[COLOR red]Dregs [COLOR cyan]Repositorio[/COLOR]">
+      <dir>
+        <info compressed="true">https://raw.github.com/dregs1/dregs1.github.io/master/addons.xml</info>
+        <checksum>https://raw.github.com/dregs1/dregs1.github.io/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/dregs1/dregs1.github.io/master</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="29.9.9">
+        <info compressed="true">https://raw.github.com/dregs1/dregs1.github.io/master/piers/addons.xml</info>
+        <checksum>https://raw.github.com/dregs1/dregs1.github.io/master/piers/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/dregs1/dregs1.github.io/master/piers</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="20.0.0">
+        <info compressed="true">https://raw.github.com/dregs1/dregs1.github.io/master/omega/addons.xml</info>
+        <checksum>https://raw.github.com/dregs1/dregs1.github.io/master/omega/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/dregs1/dregs1.github.io/master/omega</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="19.9.9">
+        <info compressed="true">https://raw.github.com/dregs1/dregs1.github.io/master/nexus/addons.xml</info>
+        <checksum>https://raw.github.com/dregs1/dregs1.github.io/master/nexus/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/dregs1/dregs1.github.io/master/nexus</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="19.0.0">
+        <info compressed="true">https://raw.github.com/dregs1/dregs1.github.io/master/matrix/addons.xml</info>
+        <checksum>https://raw.github.com/dregs1/dregs1.github.io/master/matrix/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/dregs1/dregs1.github.io/master/matrix</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="17.0.0" maxversion="18.9.0">
+        <info compressed="true">https://raw.github.com/dregs1/dregs1.github.io/master/leia/addons.xml</info>
+        <checksum>https://raw.github.com/dregs1/dregs1.github.io/master/leia/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/dregs1/dregs1.github.io/master/leia</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="16.0.0" maxversion="17.0.0">
+        <info compressed="true">https://raw.github.com/dregs1/dregs1.github.io/master/krypton/addons.xml</info>
+        <checksum>https://raw.github.com/dregs1/dregs1.github.io/master/krypton/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/dregs1/dregs1.github.io/master/krypton</datadir>
+        <hashes>false</hashes>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>repositorio Dregs</summary>
+      <description>repositorio oficial Dregs- Proibido reproducao sem autorização prévia</description>
+      <disclaimer/>
+      <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.7">
+    <requires>
+      <!--<import addon="xbmc.python" version="3.0.0"/>-->
+    </requires>
+    <extension point="xbmc.addon.repository">
+      <dir>
+        <info>http://127.0.0.1:65223/addons.xml</info>
+        <checksum>http://127.0.0.1:65223/addons.xml.md5</checksum>
+        <datadir>http://127.0.0.1:65223/</datadir>
+      </dir>
+    </extension>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <license>See https://github.com/ElementumOrg/repository.elementumorg/blob/master/LICENSE</license>
+      <source>https://github.com/ElementumOrg/repository.elementumorg</source>
+      <summary lang="en">GitHub virtual Add-on repository</summary>
+      <description lang="en">Customizable repository which acts as a proxy for defined GitHub users' add-ons updates.</description>
+      <news>
+- Allow running in standalone mode
+- Migrate to GitHub API
+- Add support for "tag_pattern" field
+- Add support for private repositories by supplying a "token"
+- Try to automatically determine zip ref from version
+- Multiple minor improvements
+        </news>
+      <assets>
+        <icon>icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="repository.kodiloucosbr" name="[COLOR gold]Repositório KodiloucosBR [COLOR green]OFICIAL[/COLOR]" version="1.0.4" provider-name="Team KodiloucosBR">
+    <requires>
+      <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="[COLOR white]KodiloucosBR [COLOR gold]Repositorio[/COLOR]">
+      <dir>
+        <info compressed="true">https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="19.0.0">
+        <info compressed="true">https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/matrix/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/matrix/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/matrix</datadir>
+        <hashes>false</hashes>
+      </dir>
+      <dir minversion="17.0.0" maxversion="18.9.0">
+        <info compressed="true">https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/leia/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/leia/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Kodiloucosbr/kodiloucosbr.github.io/master/leia</datadir>
+        <hashes>false</hashes>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>Repositorio KodiloucosBR Oficial</summary>
+      <description>Repositorio oficial Addon KodiloucosBR - Proibido reprodução sem previa autorizacao</description>
+      <disclaimer/>
+      <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.9">
+    <extension point="xbmc.addon.repository" name="SlyGuy Repository">
+      <dir>
+        <info compressed="false">https://slyguy.uk/.repo/repository.slyguy/addons.xml</info>
+        <checksum>https://slyguy.uk/.repo/repository.slyguy/addons.xml.md5</checksum>
+        <datadir zip="true">https://slyguy.uk/.repo/repository.slyguy/</datadir>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <description lang="en">Addons by SlyGuy (slyguy.uk)</description>
+      <license/>
+      <language/>
+      <website/>
+      <news/>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+</addons>
