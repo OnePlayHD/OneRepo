@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+  <addon id="script.limpeza.Matrix" name="[COLORred]Script[/COLOR] [COLORgreen]Limpeza[/COLOR]" provider-name="BOSS" version="1.0.1">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup">
+      <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <summary lang="en_GB">Clean up temporary files in Kodi.</summary>
+      <summary lang="pt_BR">Limpeza de arquivos temporários no Kodi.</summary>
+      <summary lang="es_ES">Limpieza de archivos temporales en Kodi.</summary>
+      <description lang="en_GB">Safely cleans temporary files (cache, temp, packages, and thumbnails) in Kodi versions 19 through 21.3, helping improve performance and free up storage space.</description>
+      <description lang="pt_BR">Remove com segurança arquivos temporários do Kodi (cache, pasta temp, pacotes e miniaturas), ajudando a melhorar o desempenho e liberar espaço. Compatível com Kodi 19 até 21.3.</description>
+      <description lang="es_ES">Limpia de forma segura los archivos temporales de Kodi (caché, temp, paquetes y miniaturas), mejorando el rendimiento y liberando espacio. Compatible con Kodi 19 hasta 21.3.</description>
+      <license>GNU GENERAL PUBLIC LICENSE</license>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.beautifulsoup4" name="beautifulsoup4" version="4.12.2" provider-name="Leonard Richardson">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.soupsieve" version="2.4.1"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Screen-scraping library</summary>
+      <description lang="en_GB">Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.</description>
+      <license>MIT</license>
+      <platform>all</platform>
+      <website>https://www.crummy.com/software/BeautifulSoup/</website>
+      <source>https://code.launchpad.net/beautifulsoup</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.certifi" name="certifi" version="2023.5.7" provider-name="Certifi">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Certifi: Python SSL Certificates</summary>
+      <description lang="en_GB">Certifi is a carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. It has been extracted from the Requests project.</description>
+      <license>MPL-2.0</license>
+      <website>https://github.com/certifi/python-certifi</website>
+      <source>https://github.com/certifi/python-certifi</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
   <addon id="script.module.chardet" name="chardet" version="5.1.0" provider-name="Character Encoding Detector">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
