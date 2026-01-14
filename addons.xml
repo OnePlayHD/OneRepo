@@ -43,4 +43,296 @@
       </assets>
     </extension>
   </addon>
+  <addon id="script.limpeza.Matrix" name="[COLORred]Script[/COLOR] [COLORgreen]Limpeza[/COLOR]" provider-name="BOSS" version="1.0.1">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup">
+      <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <summary lang="en_GB">Clean up temporary files in Kodi.</summary>
+      <summary lang="pt_BR">Limpeza de arquivos temporários no Kodi.</summary>
+      <summary lang="es_ES">Limpieza de archivos temporales en Kodi.</summary>
+      <description lang="en_GB">Safely cleans temporary files (cache, temp, packages, and thumbnails) in Kodi versions 19 through 21.3, helping improve performance and free up storage space.</description>
+      <description lang="pt_BR">Remove com segurança arquivos temporários do Kodi (cache, pasta temp, pacotes e miniaturas), ajudando a melhorar o desempenho e liberar espaço. Compatível com Kodi 19 até 21.3.</description>
+      <description lang="es_ES">Limpia de forma segura los archivos temporales de Kodi (caché, temp, paquetes y miniaturas), mejorando el rendimiento y liberando espacio. Compatible con Kodi 19 hasta 21.3.</description>
+      <license>GNU GENERAL PUBLIC LICENSE</license>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.beautifulsoup4" name="beautifulsoup4" version="4.12.2" provider-name="Leonard Richardson">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.soupsieve" version="2.4.1"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Screen-scraping library</summary>
+      <description lang="en_GB">Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.</description>
+      <license>MIT</license>
+      <platform>all</platform>
+      <website>https://www.crummy.com/software/BeautifulSoup/</website>
+      <source>https://code.launchpad.net/beautifulsoup</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.certifi" name="certifi" version="2023.5.7" provider-name="Certifi">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Certifi: Python SSL Certificates</summary>
+      <description lang="en_GB">Certifi is a carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. It has been extracted from the Requests project.</description>
+      <license>MPL-2.0</license>
+      <website>https://github.com/certifi/python-certifi</website>
+      <source>https://github.com/certifi/python-certifi</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.chardet" name="chardet" version="5.1.0" provider-name="Character Encoding Detector">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">The Universal Character Encoding Detector</summary>
+      <description lang="en_GB">The Universal Character Encoding Detector</description>
+      <license>LGPL-2.1</license>
+      <platform>all</platform>
+      <website>https://chardet.readthedocs.io/</website>
+      <source>https://github.com/chardet/chardet</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.idna" name="idna" version="3.10.0" provider-name="Kim Davies">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Internationalized Domain Names for Python</summary>
+      <description lang="en_GB">Internationalized Domain Names for Python</description>
+      <license>BSD-3-Clause</license>
+      <platform>all</platform>
+      <website>https://github.com/kjd/idna</website>
+      <source>https://github.com/kjd/idna</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.kodi-helper" name="KODI HELPER" version="0.0.4" provider-name="zoreu">
+    <requires>
+      <import addon="script.module.simplejson"/>
+      <import addon="script.module.six"/>
+      <import addon="script.module.kodi-six"/>
+      <import addon="script.module.requests"/>
+      <import addon="script.module.beautifulsoup4"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="kodi.context.item">
+      <menu id="kodi.core.main">
+        <menu>
+          <label>KODI HELPER MENU</label>
+          <item library="context_proxy.py">
+            <label>PLAY IPTV WITH PROXY</label>
+            <visible>String.Contains(ListItem.path,plugin)</visible>
+          </item>
+          <item library="context_info.py">
+            <label>IPTV INFO</label>
+            <visible>String.Contains(ListItem.path,plugin)</visible>
+          </item>
+          <item library="context_torrent.py">
+            <label>PLAY TORRENT</label>
+            <visible>String.Contains(ListItem.path,plugin)</visible>
+          </item>
+        </menu>
+      </menu>
+    </extension>
+    <extension point="kodi.addon.metadata">
+      <summary lang="en">Kodi helper module for addons</summary>
+      <disclaimer lang="en">The author is not responsible for addon usage and does not host or distribute any of the content displayed by this addon.</disclaimer>
+      <license>WTFPL, Version 2, December 2004. See included LICENSE.</license>
+      <source>https://github.com/zoreu/script.module.kodi-helper</source>
+      <forum/>
+      <assets>
+        <icon>icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.kodi-six" name="Kodi Six" version="0.1.3.1" provider-name="Roman V.M.">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="libs"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Wrappers around Kodi Python API for seamless Python 2/3 compatibility</summary>
+      <description lang="en_GB">Wrappers around Kodi Python API that normalize handling of textual and byte strings in Python 2 and 3.</description>
+      <platform>all</platform>
+      <license>GPL v.3</license>
+      <forum>https://forum.kodi.tv/showthread.php?tid=327883</forum>
+      <source>https://github.com/romanvm/kodi.six</source>
+      <assets>
+        <icon>icon.png</icon>
+      </assets>
+      <news>0.1.3:
+- Fix non-UTF-8 byte string decoding in Python 2.</news>
+    </extension>
+  </addon>
+  <addon id="script.module.requests" name="requests" version="2.31.0" provider-name="Python Software Foundation">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.certifi" version="2023.5.7"/>
+      <import addon="script.module.chardet" version="5.1.0"/>
+      <import addon="script.module.idna" version="3.4.0"/>
+      <import addon="script.module.urllib3" version="1.26.16+matrix.1"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Requests is an elegant and simple HTTP library for Python, built for human beings.</summary>
+      <description lang="en_GB">Requests is an elegant and simple HTTP library for Python, built for human beings.</description>
+      <license>Apache-2.0</license>
+      <platform>all</platform>
+      <website>https://requests.readthedocs.io/</website>
+      <source>https://github.com/psf/requests</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.190" provider-name="gujal">
+    <requires>
+      <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+      <import addon="script.module.six"/>
+      <import addon="script.module.kodi-six"/>
+      <import addon="plugin.video.youtube" optional="true"/>
+      <import addon="script.module.python.twitch" optional="true"/>
+      <import addon="plugin.googledrive" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.python.pluginsource" library="lib/default.py"/>
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+      <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+      <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+      <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+      <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+      <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
+      <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+      <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+      <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.simplejson" name="simplejson" version="3.19.1+matrix.1" provider-name="Bob Ippolito">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Simple, fast, extensible JSON encoder/decoder for Python</summary>
+      <description lang="en_GB">Simple, fast, extensible JSON encoder/decoder for Python</description>
+      <license>MIT</license>
+      <platform>all</platform>
+      <website>https://github.com/simplejson/simplejson</website>
+      <source>https://github.com/simplejson/simplejson</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.six" name="six" version="1.16.0+matrix.1" provider-name="Benjamin Peterson">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Python 2 and 3 compatibility utilities</summary>
+      <description lang="en_GB">Python 2 and 3 compatibility utilities</description>
+      <license>MIT</license>
+      <platform>all</platform>
+      <website>https://github.com/benjaminp/six</website>
+      <source>https://github.com/benjaminp/six</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.soupsieve" name="soupsieve" version="2.4.1" provider-name="Isaac Muse">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">A modern CSS selector implementation for Beautiful Soup.</summary>
+      <description lang="en_GB">A modern CSS selector implementation for Beautiful Soup.</description>
+      <license>MIT</license>
+      <platform>all</platform>
+      <website>https://facelessuser.github.io/soupsieve/</website>
+      <source>https://github.com/facelessuser/soupsieve</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.urllib3" name="urllib3" version="2.2.3" provider-name="urllib3">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">urllib3 is a powerful, user-friendly HTTP client for Python</summary>
+      <description lang="en_GB">urllib3 is a powerful, user-friendly HTTP client for Python. Much of the Python ecosystem already uses urllib3 and you should too. urllib3 brings many critical features that are missing from the Python standard libraries</description>
+      <license>MIT</license>
+      <platform>all</platform>
+      <website>https://urllib3.readthedocs.io/</website>
+      <source>https://github.com/urllib3/urllib3</source>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.oneplayvip.downloader" name="ONEPLAY VIP DOWNLOADER" version="1.0.4" provider-name="Oneplay team">
+    <requires>
+      <import addon="script.module.six"/>
+      <import addon="script.module.kodi-six"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Oneplay vip downloader, download apk s from oneplay</summary>
+      <summary lang="pt">Oneplay vip downloader, baixe apk s do oneplay</summary>
+      <description lang="en">Oneplay vip is a paid iptv service</description>
+      <description lang="pt">Oneplay vip é um serviço pago de iptv</description>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 1, 12 June 2022</license>
+      <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+      <disclaimer lang="pt">O autor deste complemento não hospeda nenhum dos conteúdos encontrados e não possui qualquer afiliação com nenhum dos provedores de conteúdo. Este complemento apenas pesquisa conteúdo em sites. Use por sua conta e risco!</disclaimer>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+        <screenshot>resources/images/screenshot-1.jpg</screenshot>
+        <screenshot>resources/images/screenshot-1.jpg</screenshot>
+        <screenshot>resources/images/screenshot-1.jpg</screenshot>
+      </assets>
+    </extension>
+  </addon>
 </addons>
