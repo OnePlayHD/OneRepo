@@ -20,12 +20,11 @@ a:hover { text-decoration:underline; }
 <hr/>
 <input type="text" id="search" placeholder="Pesquisar arquivos ou pastas...">
 <pre id='listing'>
-📁 <a href="./leia/index.html">leia/</a>
 📁 <a href="./matrix/index.html">matrix/</a>
 📁 <a href="./One.repo/index.html">One.repo/</a>
 </pre>
 <script>
-const items = [['leia', '📁 <a href="./leia/index.html">leia/</a>'], ['matrix', '📁 <a href="./matrix/index.html">matrix/</a>'], ['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>']];
+const items = [['matrix', '📁 <a href="./matrix/index.html">matrix/</a>'], ['one.repo', '📁 <a href="./One.repo/index.html">One.repo/</a>']];
 const input = document.getElementById('search');
 const listing = document.getElementById('listing');
 input.addEventListener('input', () => {
