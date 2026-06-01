@@ -1,13 +1,18 @@
 name: Auto Generate Index
 
-on:
+"on":
   push:
     paths:
       - "**/*.zip"
+      - "generate_index.py"
+      - ".github/workflows/index.yml"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
-  group: auto-generate-index
+  group: auto-generate-index-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -15,11 +20,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
@@ -27,14 +34,21 @@ jobs:
         run: python generate_index.py
 
       - name: Commit and push changes
+        shell: bash
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          set -e
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # adiciona CRIAÇÕES, MODIFICAÇÕES E REMOÇÕES
           git add -A
 
-          git commit -m "index.html" || echo "No changes"
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
 
-          git pull --rebase origin master
-          git push origin master
+          git commit -m "Atualiza index automático"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
